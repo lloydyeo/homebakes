@@ -195,15 +195,15 @@
 
 	<!-- JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.min.js"></script>
+	<script src="{{ asset('canvas/js/jquery.js') }}"></script>
+	<script src="{{ asset('canvas/js/plugins.min.js') }}"></script>
 
 	<!-- For Countdown -->
-	<script src="js/components/moment.js"></script>
+	<script src="{{ asset('canvas/js/components/moment.js') }}"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="js/functions.js"></script>
+	<script src="{{ asset('canvas/js/functions.js') }}"></script>
 
 </body>
 </html>
