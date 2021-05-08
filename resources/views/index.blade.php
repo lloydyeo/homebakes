@@ -15,12 +15,10 @@
 	<link rel="stylesheet" href="{{ asset('canvas/css/animate.css') }}" type="text/css" />
 	<link rel="stylesheet" href="{{ asset('canvas/css/magnific-popup.css') }}" type="text/css" />
 	<link rel="stylesheet" href="{{ asset('canvas/css/custom.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/colors.css') }}" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        ::selection { background: #3F2A23; }
-        ::-moz-selection { background: #3F2A23; }
-        ::-webkit-selection { background: #3F2A23; }
-        #logo img {
+        img.white-tint {
             filter: brightness(0) invert(1);
         }
     </style>
@@ -48,9 +46,11 @@
 						============================================= -->
 						<div id="logo">
 							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png">
-                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers"></a>
+{{--                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers">--}}
+                            </a>
 							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">
-                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers"></a>
+{{--                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers">--}}
+                            </a>
 						</div><!-- #logo end -->
 
 						<div class="header-misc">
@@ -76,8 +76,9 @@
 				<div class="vertical-middle">
 					<div class="container py-5">
 
-                        <div class="text-center w-100" style="filter:brightness(0); filter: invert(1);">
-                            <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers" style="text-align: center; margin-left:auto; margin-right: auto; height:100px;"/>
+                        <div class="text-center w-100 pb-3">
+                            <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers" class="white-tint"
+                                 style="text-align: center; margin-left:auto; margin-right: auto; height:100px;"/>
                         </div>
 
 						<div class="heading-block text-center border-bottom-0">

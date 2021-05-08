@@ -15,5 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
         //
     ]);
 
+mix.copy('resources/css/colors.css', 'public/css');
 mix.copyDirectory('resources/images', 'public/images');
 mix.copyDirectory('resources/canvas', 'public/canvas');
