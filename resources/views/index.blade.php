@@ -21,6 +21,21 @@
         img.white-tint {
             filter: brightness(0) invert(1);
         }
+        .dark .form-control:not(.not-dark):active, .dark .form-control:not(.not-dark):focus, .dark .sm-form-control:not(.not-dark):active, .dark .sm-form-control:not(.not-dark):focus,
+        .dark .form-control:not(.not-dark), .dark .sm-form-control:not(.not-dark),
+        .dark .input-group-text {
+            border-color: #3C2720!important;
+            color: #FFFFFF;
+        }
+        .btn-primary {
+            border-color:rgb(85,39,7)!important;
+            background-color:rgb(85,39,7)!important;
+        }
+        .btn-primary:hover {
+            border-color:rgb(60,39,33)!important;
+            background-color: rgb(60,39,33)!important;
+        }
+
     </style>
 
 	<!-- Document Title
@@ -53,13 +68,12 @@
                             </a>
 						</div><!-- #logo end -->
 
-						<div class="header-misc">
-							<a href="#" data-toggle="modal" data-target="#contactFormModal" class="social-icon si-light si-email3">
-								<i class="icon-email3"></i>
-								<i class="icon-email3"></i>
-							</a>
-
-						</div>
+{{--						<div class="header-misc">--}}
+{{--							<a href="#" data-toggle="modal" data-target="#contactFormModal" class="social-icon si-light si-email3">--}}
+{{--								<i class="icon-email3"></i>--}}
+{{--								<i class="icon-email3"></i>--}}
+{{--							</a>--}}
+{{--						</div>--}}
 
 					</div>
 				</div>
@@ -67,11 +81,24 @@
 			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
+
 		<section id="slider" class="slider-element min-vh-100 dark include-header" style="
                     background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.6)), url('{{ asset('images/homebakes-coming-soon.jpg') }}');
+                    background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.6)),
+            url('https://image.shutterstock.com/image-photo/raw-macarons-kitchen-600w-1448122397.jpg');
                     background-repeat: no-repeat;
-		            background-position: center center;">
+		            background-position: center center;
+                    background-size:cover;
+                    ">
 			<div class="slider-inner">
+
+{{--                <div class="video-wrap" style="z-index: 1;">--}}
+{{--                    <video poster="{{ asset('images/homebakes-coming-soon.jpg') }}" preload="auto" loop="" autoplay="" muted="" style="width: 1665px; height: 936.562px; top: -52.2812px;">--}}
+{{--                        <source src="https://ak.picdn.net/shutterstock/videos/32759407/preview/stock-footage-cupcake-baking-in-oven-time-lapse-footage-of-cooking-muffins-uhd.webm" type="video/mp4">--}}
+{{--                        <source src="https://ak.picdn.net/shutterstock/videos/32759407/preview/stock-footage-cupcake-baking-in-oven-time-lapse-footage-of-cooking-muffins-uhd.webm" type="video/webm">--}}
+{{--                    </video>--}}
+{{--                    <div class="video-overlay" style="background-color: rgba(0,0,0,0.45);"></div>--}}
+{{--                </div>--}}
 
 				<div class="vertical-middle">
 					<div class="container py-5">
@@ -83,21 +110,27 @@
 
 						<div class="heading-block text-center border-bottom-0">
 							<h1>Something Fresh is Baking in our Oven...</h1>
-							<span>Subscribe now to a endless discovery of delicious home bakers!</span>
+							<span>Subscribe now to an endless discovery of delicious home bakers!</span>
 						</div>
 
-						<div id="countdown-ex1" class="countdown countdown-large coming-soon mx-auto mb-5" data-year="2021" style="max-width:700px;"></div>
+						<div id="countdown-ex1" class="countdown countdown-large coming-soon mx-auto mb-5"
+                             data-year="2021"
+                             data-month="5"
+                             data-day="22"
+                             style="max-width:700px;"></div>
 
 						<div class="subscribe-widget">
 							<div class="widget-subscribe-form-result"></div>
-							<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+							<form id="widget-subscribe-form" action="/api/subscribe" method="post" class="mb-0">
+                                <input type="hidden" name="prefix" value="widget-subscribe-form-">
 								<div class="input-group input-group-lg mx-auto" style="max-width:600px;">
 									<div class="input-group-prepend">
-										<div class="input-group-text"><i class="icon-email2"></i></div>
+										<div class="input-group-text"><i class="icon-email3"></i></div>
 									</div>
-									<input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+									<input type="email" name="widget-subscribe-form-email"
+                                           class="form-control required email" placeholder="Enter your Email">
 									<div class="input-group-append">
-										<button class="btn btn-info" type="submit">Subscribe Now</button>
+										<button class="btn btn-primary" type="submit">Keep me updated!</button>
 									</div>
 								</div>
 							</form>
