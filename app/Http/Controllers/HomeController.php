@@ -17,6 +17,6 @@ class HomeController extends Controller
         if ($email) {
 
         }
-        return response()->json(array_merge($request->all(), ['message' => 'abc']));
+        return response()->json(array_merge($request->all(), ['message' => 'Successfully subscribed!']));
     }
 }

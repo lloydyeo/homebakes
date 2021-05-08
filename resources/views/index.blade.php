@@ -60,7 +60,6 @@
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
-
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
@@ -71,14 +70,6 @@
 {{--                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers">--}}
                             </a>
 						</div><!-- #logo end -->
-
-{{--						<div class="header-misc">--}}
-{{--							<a href="#" data-toggle="modal" data-target="#contactFormModal" class="social-icon si-light si-email3">--}}
-{{--								<i class="icon-email3"></i>--}}
-{{--								<i class="icon-email3"></i>--}}
-{{--							</a>--}}
-{{--						</div>--}}
-
 					</div>
 				</div>
 			</div>
@@ -239,6 +230,10 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="{{ asset('canvas/js/functions.js') }}"></script>
-
+    <script>
+        jQuery('#widget-subscribe-form').on('formSubmitSuccess', function(){
+            console.log('success');
+        });
+    </script>
 </body>
 </html>
