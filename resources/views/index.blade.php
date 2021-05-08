@@ -83,9 +83,7 @@
 
 
 		<section id="slider" class="slider-element min-vh-100 dark include-header" style="
-                    background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.6)), url('{{ asset('images/homebakes-coming-soon.jpg') }}');
-                    background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.6)),
-            url('https://image.shutterstock.com/image-photo/raw-macarons-kitchen-600w-1448122397.jpg');
+                    background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.6)), url('{{ asset('images/homebaker-coming-soon.jpg') }}');
                     background-repeat: no-repeat;
 		            background-position: center center;
                     background-size:cover;
