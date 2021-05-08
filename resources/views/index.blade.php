@@ -20,6 +20,9 @@
         ::selection { background: #3F2A23; }
         ::-moz-selection { background: #3F2A23; }
         ::-webkit-selection { background: #3F2A23; }
+        #logo img {
+            filter: brightness(0) invert(1);
+        }
     </style>
 
 	<!-- Document Title
@@ -44,12 +47,13 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png">
+                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">
+                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers"></a>
 						</div><!-- #logo end -->
 
 						<div class="header-misc">
-
 							<a href="#" data-toggle="modal" data-target="#contactFormModal" class="social-icon si-light si-email3">
 								<i class="icon-email3"></i>
 								<i class="icon-email3"></i>
@@ -71,6 +75,11 @@
 
 				<div class="vertical-middle">
 					<div class="container py-5">
+
+                        <div class="text-center w-100" style="filter:brightness(0); filter: invert(1);">
+                            <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers" style="text-align: center; margin-left:auto; margin-right: auto; height:100px;"/>
+                        </div>
+
 						<div class="heading-block text-center border-bottom-0">
 							<h1>Something Fresh is Baking in our Oven...</h1>
 							<span>Subscribe now to a endless discovery of delicious home bakers!</span>
