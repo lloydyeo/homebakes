@@ -8,19 +8,23 @@
 	<!-- Stylesheets
 	============================================= -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<link rel="stylesheet" href="css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-
-	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('canvas/css/bootstrap.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('canvas/style.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('canvas/css/dark.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('canvas/css/font-icons.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('canvas/css/animate.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('canvas/css/magnific-popup.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('canvas/css/custom.css') }}" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        ::selection { background: #3F2A23; }
+        ::-moz-selection { background: #3F2A23; }
+        ::-webkit-selection { background: #3F2A23; }
+    </style>
 
 	<!-- Document Title
 	============================================= -->
-	<title>Coming Soon | Canvas</title>
+	<title>Coming Soon | Home Bakers</title>
 
 </head>
 
@@ -59,14 +63,17 @@
 			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element min-vh-100 dark include-header" style="background: url(images/landing/static.jpg) center center no-repeat;">
+		<section id="slider" class="slider-element min-vh-100 dark include-header" style="
+                    background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.6)), url('{{ asset('images/homebakes-coming-soon.jpg') }}');
+                    background-repeat: no-repeat;
+		            background-position: center center;">
 			<div class="slider-inner">
 
 				<div class="vertical-middle">
 					<div class="container py-5">
 						<div class="heading-block text-center border-bottom-0">
-							<h1>We are currently Under Construction</h1>
-							<span>Please check back again within Some Days as We're Pretty Close</span>
+							<h1>Something Fresh is Baking in our Oven...</h1>
+							<span>Subscribe now to a endless discovery of delicious home bakers!</span>
 						</div>
 
 						<div id="countdown-ex1" class="countdown countdown-large coming-soon mx-auto mb-5" data-year="2021" style="max-width:700px;"></div>
