@@ -35,7 +35,11 @@
             border-color:rgb(60,39,33)!important;
             background-color: rgb(60,39,33)!important;
         }
-
+        @media (min-width: 768px) {
+            .countdown.countdown-large.coming-soon .countdown-amount {
+                background-color: rgba(0,0,0,0.4)!important;
+            }
+        }
     </style>
 
 	<!-- Document Title
