@@ -695,7 +695,7 @@
 
 						<div class="col-12 col-md-auto text-center text-md-right">
 							<div class="copyrights-menu copyright-links clearfix">
-								<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a href="#">Contact</a>
+								<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Contact</a>
 							</div>
 						</div>
 					</div>
