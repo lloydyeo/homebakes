@@ -160,6 +160,18 @@
                 background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8)) 100%;
                 background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8)) 100%;
             }
+
+            #news-section .entry {
+                border-radius:30px;
+                overflow:hidden;
+                border-width: 0;
+                transition: transform .2s ease-in-out;
+            }
+
+            #news-section .entry:hover {
+                transform: translate(0px, -10px);
+                box-shadow: 0 0 15px 2px rgb(0 0 0 / 55%);
+            }
         }
     </style>
 	<!-- Document Title
@@ -236,7 +248,7 @@
 										<h2 class="font-secondary ls0 font-weight-normal nott" data-animate="fadeIn">Freshly Baked Treats</h2>
 										<p class="d-none d-sm-block font-primary" data-animate="fadeIn" data-delay="400">Discover from our list of home bakers to satisfy your cravings now!</p>
 
-                                        <div class="input-group form-group mt-5" data-animate="fadeIn" data-delay="800">
+                                        <div class="input-group form-group mt-5" style="box-shadow:0 0 30px 4px rgb(0 0 0 / 80%);" data-animate="fadeIn" data-delay="800">
                                             <input id="search-all" class="pl-3 form-control-pill text-white font-weight-bold
                                             form-control form-control-plaintext border-0"
                                                        type="text" name="search" value="" placeholder="Search by name or location..." />
@@ -268,73 +280,30 @@
 
 			<div class="" style="overflow: visible;">
 
-                <div class="section mt-2 bg-transparent">
+                <div id="categories-section" class="section mt-2 mb-2 bg-transparent">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 offset-md-2 center">
-                                <h2 class="text-title-light text-dark mb-5 ls1 text-uppercase">Welcome to HomeBakers!</h2>
+                                <h2 style="font-size: 56px;" class="font-secondary nott text-title-light text-dark mb-5 ls1 text-uppercase">Welcome to HomeBakers!</h2>
                                 <p style="font-size: 17px; color: #777"></p>
-{{--                                <img src="{{ asset('canvas/demos/barber/images/about/sign.png') }}" alt="Sign" width="150" class="mt-3">--}}
                             </div>
-                            <div class="col-12 mt-5 mb-3">
+                            <div class="col-12 mb-3">
                                 <h3 class="center">What are you craving?</h3>
 
                                 <div class="recipe-categories justify-content-center">
-                                    <a href="javascript:void(0);" data-animate="fadeInUp" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/bf.jpg') }}');">
+                                    <a href="javascript:void(0);" data-animate="fadeInUp" class="recipe-category" style="background-image: url('{{ asset('images/categories/cheescake.jpg') }}');">
                                         <div class="recipe-category-inner">
-                                            <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/bf.svg') }}" alt="Breakfast"></div>
-                                            <div class="recipe-category-info">Breakfast</div>
+                                            <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/desserts.svg') }}" alt="Cheesecake"></div>
+                                            <div class="recipe-category-info">Cakes</div>
                                         </div>
                                     </a>
 
-                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="100" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/lunch.jpg') }}');">
-                                        <div class="recipe-category-inner">
-                                            <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/lunch.svg') }}" alt="Lunch"></div>
-                                            <div class="recipe-category-info">Lunch</div>
-                                        </div>
-                                    </a>
-
-                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="200" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/dinner.jpg') }}');">
-                                        <div class="recipe-category-inner">
-                                            <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/dinner.svg') }}" alt="Dinner"></div>
-                                            <div class="recipe-category-info">Dinner</div>
-                                        </div>
-                                    </a>
-
-                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="300" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/desserts.jpg') }}');">
-                                        <div class="recipe-category-inner">
-                                            <div class="recipe-category-icon"><img src="{{ asset('images/categories/cheescake.jpg') }}" alt="Cheesecake"></div>
-                                            <div class="recipe-category-info">Cheesecake</div>
-                                        </div>
-                                    </a>
-
-                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="300" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/desserts.jpg') }}');">
+                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="200" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/desserts.jpg') }}');">
                                         <div class="recipe-category-inner">
                                             <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/desserts.svg') }}" alt="Muffins"></div>
                                             <div class="recipe-category-info">Muffins</div>
                                         </div>
                                     </a>
-
-{{--                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="400" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/veg.jpg') }}');">--}}
-{{--                                        <div class="recipe-category-inner">--}}
-{{--                                            <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/vegan.svg') }}" alt="Vegan"></div>--}}
-{{--                                            <div class="recipe-category-info">Vegan</div>--}}
-{{--                                        </div>--}}
-{{--                                    </a>--}}
-
-{{--                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="500" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/seafood.jpg') }}');">--}}
-{{--                                        <div class="recipe-category-inner">--}}
-{{--                                            <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/seafood.svg') }}" alt="Seafood"></div>--}}
-{{--                                            <div class="recipe-category-info">Seafood</div>--}}
-{{--                                        </div>--}}
-{{--                                    </a>--}}
-
-{{--                                    <a href="javascript:void(0);" data-animate="fadeInUp" data-delay="600" class="recipe-category" style="background-image: url('{{ asset('canvas/demos/recipes/images/categories/drinks.jpg') }}');">--}}
-{{--                                        <div class="recipe-category-inner">--}}
-{{--                                            <div class="recipe-category-icon"><img src="{{ asset('canvas/demos/recipes/images/icons/drinks.svg') }}" alt="Beverages"></div>--}}
-{{--                                            <div class="recipe-category-info">Beverages</div>--}}
-{{--                                        </div>--}}
-{{--                                    </a>--}}
                                 </div>
 
                             </div>
@@ -342,268 +311,110 @@
                     </div>
                 </div>
 
-				<div class="section m-0 clearfix" style="padding: 40px 0; background: url('{{ asset('canvas/demos/restaurant/images/sections/4.jpg') }}') center center no-repeat; background-size: 100% auto">
-					<div class="container">
+                <div class="clear"></div>
 
-						<div class="heading-block border-bottom-0 bottommargin-sm">
-							<h2 class="font-secondary color nott" style="font-size: 52px;">How It Works</h2>
-						</div>
+                <div id="news-section" style="background: #FFF url('{{ asset('canvas/demos/restaurant/images/sections/7.jpg') }}') no-repeat top right; background-size: 100% auto; padding-top: 50px">
+                    <div class="container clearfix">
 
-						<div class="row col-mb-50">
-							<div class="col-lg-3">
-								<div class="feature-box media-box" style="max-width: 400px;">
-									<div class="fbox-media" style="width: 70px; height: auto;">
-										<img src="{{ asset('canvas/demos/restaurant/images/icons/bowl.svg') }}" alt="Image">
-									</div>
-									<div class="fbox-content px-0">
-										<h3>Food Served Hot</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas omnis nam molestias minus ipsa, placeat!</p>
-									</div>
-								</div>
-							</div>
+                        <div class="heading-block center border-bottom-0">
+                            <span class="font-primary ls1" style="font-size: 14px; color: #AAA">Our Latest News</span>
+                            <h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.2;">News Feed</h3>
+                        </div>
 
-							<div class="col-lg-3">
-								<div class="feature-box media-box" style="max-width: 400px;">
-									<div class="fbox-media" style="width: 70px; height: auto;">
-										<img src="{{ asset('canvas/demos/restaurant/images/icons/spoon.svg') }}" alt="Image">
-									</div>
-									<div class="fbox-content px-0">
-										<h3>Ample Options</h3>
-										<p>Facere aliquam itaque quia recusandae, corporis fugit fugiat eaque, accusamus officiis reprehenderit.</p>
-									</div>
-								</div>
-							</div>
+                        <div class="row posts-md col-mb-30 mb-0">
 
-							<div class="col-lg-3">
-								<div class="feature-box media-box" style="max-width: 400px;">
-									<div class="fbox-media" style="width: 70px; height: auto;">
-										<img src="{{ asset('canvas/demos/restaurant/images/icons/glass.svg') }}" alt="Image">
-									</div>
-									<div class="fbox-content px-0">
-										<h3>In-House Brewery</h3>
-										<p>Velit id facilis odit aliquid laudantium. Tempore, sequi. Harum nesciunt, magni aperiam est?</p>
-									</div>
-								</div>
-							</div>
-						</div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="entry">
+                                    <div class="entry-image mb-0">
+                                        <a href="javascript:void(0);">
+                                            <img src="{{ asset('canvas/demos/restaurant/images/blogs/1.jpg') }}" alt="Image 1"></a>
+                                    </div>
+                                    <div class="entry-title mt-0 p-4 title-xs nott">
+                                        <div class="entry-meta mt-0 mb-2">
+                                            <ul>
+                                                <li><a href="#">08th Apr 2021</a></li>
+                                                <li><a href="#">List</a></li>
+                                            </ul>
+                                        </div>
 
-					</div>
-				</div>
+                                        <h2 class="mb-0"><a href="javascript:void(0);">Top 10 Bakers with Savoury Additions</a></h2>
+                                    </div>
+                                </div>
+                            </div>
 
-				<div class="section mb-0" style="background: #FFF url('demos/restaurant/images/sections/5.jpg') no-repeat top left / cover; padding: 60px 0; border-top: 1px solid #EEE;">
-					<div class="container clearfix">
-						<div class="heading-block center mb-0 border-bottom-0">
-							<span class="font-primary" style="font-size: 16px; color: #888">Tasty &amp; Healthy</span>
-							<h3 class="nott font-secondary ls0" style="font-size: 60px;">Our Food Menu</h3>
-						</div>
-					</div>
-				</div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="entry">
+                                    <div class="entry-image mb-0">
+                                        <a href="demos/restaurant/images/blogs/2.jpg" data-lightbox="image">
+                                            <img src="{{ asset('canvas/demos/restaurant/images/blogs/2.jpg') }}" alt="Image 2"></a>
+                                    </div>
+                                    <div class="entry-title mt-0 p-4 title-xs nott">
+                                        <div class="entry-meta mt-0 mb-2">
+                                            <ul>
+                                                <li><a href="#">21st Mar 2021</a></li>
+                                                <li><a href="#">List</a></li>
+                                            </ul>
+                                        </div>
 
-				<div class="section food-menu mt-0 p-0">
-					<div class="container-fluid">
-						<div class="row align-items-stretch clearfix">
-							<div class="col-lg-7 clearfix">
-								<div class="vertical-middle">
-									<div class="col-padding clearfix">
-										<div><div id="item-thumb" class="item-thumb"></div></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-5" style="background-color: #FFF; padding: 0; box-shadow: -4px 1px 15px 3px rgba(0,0,0,0.07);">
-								<div id="food-menu-carousel" class="menu-carousel owl-carousel image-carousel food-menu-carousel carousel-widget customjs">
+                                        <h2 class="mb-0"><a href="javascript:void(0);">Bakers serving IG-worthy treats & pastries</a></h2>
+                                    </div>
+                                </div>
+                            </div>
 
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/1.jpg" alt="Image 1">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Multigrain Toast.</h3>
-													<div class="food-info">Corn, Bacon, Tomato, Cheese, Onlion</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;19.99</div>
-											</div>
-											<p class="mb-0">Efficiently syndicate cross functional web-readiness before business niches. Uniquely reinvent ethical testing procedures before ethical leadership skills.<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/2.jpg" alt="Image 2">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Prawn Mussels Plate.</h3>
-													<div class="food-info">Prawn, Tomato, Noodles</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;11.59</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/3.jpg" alt="Image 3">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Black Jumbo Burger.</h3>
-													<div class="food-info">Chicken Patty, Bean Bread</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;8.99</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/4.jpg" alt="Image 4">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Fried Chicken.</h3>
-													<div class="food-info">Chicken, Olive Oil</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;22.99</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/5.jpg" alt="Image 1">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Smoothie Fruit Bowl.</h3>
-													<div class="food-info">Raspberries, Strawberries, Granola, Banana</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;19.99</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur. Holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/6.jpg" alt="Image 2">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Margarita Pizza.</h3>
-													<div class="food-info">Wheat Flour, Cheese, Tomato, Onion</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;14.99</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<div class="food-price color font-primary mt-3">&dollar;14.99</div>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/7.jpg" alt="Image 3">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Macaroni Pasta.</h3>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;11.99</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/8.jpg" alt="Image 4">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Chicken with Fries.</h3>
-													<div class="food-info">Chicken, Potatoes, Broccolies</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;33.99</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/food/9.jpg" alt="Image 4">
-										<div class="food-content clearfix">
-											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
-												<div class="heading-block border-bottom-0 mb-0">
-													<h3 class="font-secondary nott">Chinese Noodle.</h3>
-													<div class="food-info">Noodles, Cornflower, Prawn</div>
-												</div>
-												<div class="food-price color font-primary mt-3">&dollar;7.99</div>
-											</div>
-											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="entry">
+                                    <div class="entry-image mb-0">
+                                        <a href="javascript:void(0);">
+                                            <img src="{{ asset('canvas/demos/restaurant/images/blogs/3.jpg') }}" alt="Image 3"></a>
+                                    </div>
+                                    <div class="entry-title mt-0 p-4 title-xs nott">
+                                        <div class="entry-meta mt-0 mb-2">
+                                            <ul>
+                                                <li><a href="#">10th Feb 2021</a></li>
+                                                <li><a href="#">Opinion</a></li>
+                                            </ul>
+                                        </div>
 
-				<div class="section mb-0 bg-transparent">
-					<div class="container">
+                                        <h2 class="mb-0"><a href="javascript:void(0);">3 reasons why you should try out home bakers for your next order</a></h2>
+                                    </div>
+                                </div>
+                            </div>
 
-						<div class="row col-mb-50">
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box media-box">
-									<div class="fbox-media">
-										<a href="demos/restaurant/reservation.html" ><img style="border-radius: 2px;" src="demos/restaurant/images/featured/1.jpg" alt="Why choose Us?"></a>
-									</div>
-									<div class="fbox-content px-0">
-										<h3>Beautiful Location.<span class="subtitle ls1" style="color:#BBB">Food Tastes Better when you are in Good Location.</span></h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus eaque perspiciatis mollitia.</p>
-									</div>
-								</div>
-							</div>
+                        </div>
 
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box media-box">
-									<div class="fbox-media">
-										<a href="demos/restaurant/gallery.html" ><img style="border-radius: 2px;" src="demos/restaurant/images/featured/2.jpg" alt="Effective Planning"></a>
-									</div>
-									<div class="fbox-content px-0">
-										<h3>Feel the Taste.<span class="subtitle ls1" style="color:#BBB">Nothing Brings people together like Good Food.</span></h3>
-										<p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore totam. Accusamus perspiciatis asperiores labore esse.</p>
-									</div>
-								</div>
-							</div>
+                        <div class="d-flex justify-content-center">
+                            <a href="javascript:void(0);" class="button button-3d button-mini button-rounded button-brown">Read All Articles</a>
+                        </div>
 
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box media-box">
-									<div class="fbox-media">
-										<a href="demos/restaurant/about-us.html" ><img style="border-radius: 2px;" src="demos/restaurant/images/featured/3.jpg" alt="Why choose Us?"></a>
-									</div>
-									<div class="fbox-content px-0">
-										<h3>Delicious Desserts.<span class="subtitle ls1" style="color:#BBB">The Best things in life are Sweet.</span></h3>
-										<p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum quo. , labore totam. Accusamus perspiciatis asperiores.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+                    </div>
+                </div>
 
-					</div>
-				</div>
-
-				<div class="section mb-0" style="background: #fee749 url('{{ asset('canvas/demos/restaurant/images/sections/4.jpg') }}') no-repeat center right; background-size: cover; padding: 60px 0;">
+				<div class="section mb-0 pt-0 bg-white">
 					<div class="heading-block center mb-0 border-bottom-0">
-						<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Sweet &amp; Sexy</span>
-						<h3 class="nott font-secondary ls0" style="font-size: 60px;line-height: 1.3;">Our Dessert Menu</h3>
+{{--						<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Sweet &amp; Sexy</span>--}}
+                        <span class="font-primary ls1" style="font-size: 14px; color: #AAA"></span>
+						<h3 class="nott font-secondary ls0" style="font-size: 60px;line-height: 1.3;">Trending Bakers</h3>
 					</div>
 				</div>
+                <style>
+                    .food-price {
+                        display:none!important;
+                    }
 
-				<div class="section dessert-menu m-0 p-0">
+                    .owl-carousel .owl-item img {
+                        width:44%;
+                        margin-left:auto;
+                        margin-right:auto;
+                    }
+                </style>
+				<div id="featured-section" class="section dessert-menu m-0 p-0">
 					<div class="container-fluid">
 
 						<div class="row align-items-stretch clearfix">
 							<div class="col-lg-5" style="background-color: #FFF; padding: 0; box-shadow: -4px 1px 15px 3px rgba(0,0,0,0.07);">
 								<div id="dessert-menu-carousel" class="menu-carousel owl-carousel image-carousel carousel-widget customjs">
-
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/1.jpg" alt="Image 1">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/1.jpg') }}" alt="Image 1">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -613,11 +424,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;19.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/2.jpg" alt="Image 2">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/2.jpg') }}" alt="Image 2">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -627,11 +438,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;11.59</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/3.jpg" alt="Image 3">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/3.jpg') }}" alt="Image 3">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -641,11 +452,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;8.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/4.jpg" alt="Image 4">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/4.jpg') }}" alt="Image 4">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -654,11 +465,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;22.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/5.jpg" alt="Image 1">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/5.jpg') }}" alt="Image 1">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -668,11 +479,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;19.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur. Holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/6.jpg" alt="Image 2">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/6.jpg') }}" alt="Image 2">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -681,11 +492,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;14.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/7.jpg" alt="Image 3">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/7.jpg') }}" alt="Image 3">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -694,11 +505,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;11.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/8.jpg" alt="Image 4">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/8.jpg') }}" alt="Image 4">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -708,11 +519,11 @@
 												<div class="food-price color font-primary mt-3">&dollar;33.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="oc-item">
-										<img class="topmargin-sm" src="demos/restaurant/images/items/desserts/9.jpg" alt="Image 4">
+										<img class="topmargin-sm" src="{{ asset('canvas/demos/restaurant/images/items/desserts/9.jpg') }}" alt="Image 4">
 										<div class="food-content clearfix">
 											<div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
 												<div class="heading-block border-bottom-0 mb-0">
@@ -721,7 +532,7 @@
 												<div class="food-price color font-primary mt-3">&dollar;7.99</div>
 											</div>
 											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet cum explicabo iure quasi impedit commodi nobis doloremque quas consequuntur!<br><br>Credibly maximize orthogonal e-services and technically sound communities. Seamlessly procrastinate holistic partnerships. Distinctively disseminate stand-alone process improvements after efficient total linkage. Efficiently syndicate.</p>
-											<a href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
+											<a href="javascript:void(0);" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -731,7 +542,7 @@
 								<div class="vertical-middle">
 									<div class="col-padding clearfix">
 										<div><div id="item-thumb1" class="item-thumb"></div></div>
-										<div class="center mx-auto"><a class="button button-border button-small button-black button-dark button-circle ml-0" style="margin-top: 0px;">See All Menu</a></div>
+										<div class="center mx-auto"><a class="button button-border button-small button-brown button-circle ml-0" style="margin-top: 0px;">See All Menu</a></div>
 									</div>
 								</div>
 							</div>
@@ -742,7 +553,7 @@
 
 				<div class="clear"></div>
 
-				<div class="section mb-0" style="padding: 80px 0; background: #F5F5F5 url('demos/restaurant/images/food-pattern.png') repeat center center;">
+				<div class="section mb-0" style="display:none!important; padding: 80px 0; background: #F5F5F5 url('demos/restaurant/images/food-pattern.png') repeat center center;">
 					<div class="container clearfix">
 
 						<div class="heading-block center border-bottom-0">
@@ -816,82 +627,6 @@
 					</div>
 				</div>
 
-				<div class="clear"></div>
-
-				<div style="background: #FFF url('{{ asset('canvas/demos/restaurant/images/sections/7.jpg') }}') no-repeat top right; background-size: 100% auto; padding-top: 50px">
-					<div class="container clearfix">
-
-						<div class="heading-block center border-bottom-0">
-							<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Our Latest News</span>
-							<h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.2;">News Feed</h3>
-						</div>
-
-						<div class="row posts-md col-mb-30 mb-0">
-
-							<div class="col-lg-4 col-md-6">
-								<div class="entry">
-									<div class="entry-image mb-0">
-										<a href="demos/restaurant/images/blogs/1.jpg" data-lightbox="image">
-                                            <img src="{{ asset('canvas/demos/restaurant/images/blogs/1.jpg') }}" alt="Image 1"></a>
-									</div>
-									<div class="entry-title mt-0 p-4 title-xs nott">
-										<div class="entry-meta mt-0 mb-2">
-											<ul>
-												<li><a href="#">08th Apr 2021</a></li>
-												<li><a href="#">Video</a></li>
-											</ul>
-										</div>
-
-										<h2 class="mb-0"><a href="demos/restaurant/blog.html">Make Ahead Super Green Vegan Quinoa Sandwich.</a></h2>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-4 col-md-6">
-								<div class="entry">
-									<div class="entry-image mb-0">
-										<a href="demos/restaurant/images/blogs/2.jpg" data-lightbox="image">
-                                            <img src="{{ asset('canvas/demos/restaurant/images/blogs/2.jpg') }}" alt="Image 2"></a>
-									</div>
-									<div class="entry-title mt-0 p-4 title-xs nott">
-										<div class="entry-meta mt-0 mb-2">
-											<ul>
-												<li><a href="#">21th Mar 2021</a></li>
-												<li><a href="#">Book</a></li>
-											</ul>
-										</div>
-
-										<h2 class="mb-0"><a href="demos/restaurant/blog.html">We Delivered Heart Shape Cornbread Waffles.</a></h2>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-4 col-md-6">
-								<div class="entry">
-									<div class="entry-image mb-0">
-										<a href="demos/restaurant/images/blogs/3.jpg" data-lightbox="image">
-                                            <img src="{{ asset('canvas/demos/restaurant/images/blogs/3.jpg') }}" alt="Image 3"></a>
-									</div>
-									<div class="entry-title mt-0 p-4 title-xs nott">
-										<div class="entry-meta mt-0 mb-2">
-											<ul>
-												<li><a href="#">10th Feb 2021</a></li>
-												<li><a href="#">Recipe</a></li>
-											</ul>
-										</div>
-
-										<h2 class="mb-0"><a href="demos/restaurant/blog.html">Top Delicious Recipes from world's Best Chefs.</a></h2>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-
-				<div class="line clear"></div>
-
 				<div style="display:none!important;" class="container section-contact topmargin-lg clearfix">
 					<div class="row clearfix">
 
@@ -943,12 +678,11 @@
 
 			</div>
 
-			<div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('demos/restaurant/images/sketch-header.png') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;"></div>
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark" style="background: url('demos/restaurant/images/footer-bg.jpg')  repeat center center / cover; background-size: auto 100%;; padding: 20px 0 22px">
+		<footer id="footer" class="dark" style="background: url('{{ asset('canvas/demos/restaurant/images/footer-bg.jpg') }}')  repeat center center / cover; background-size: auto 100%;; padding: 20px 0 22px">
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights" class="bg-transparent pb-4">
@@ -956,7 +690,7 @@
 
 					<div class="row justify-content-between col-mb-30">
 						<div class="col-12 col-md-auto text-center text-md-left">
-							<span class="font-primary">&copy; Canvas Inc. 2021. All Rights Reserved.</span>
+							<span class="font-primary">&copy; HomeBakers 2021. All Rights Reserved.</span>
 						</div>
 
 						<div class="col-12 col-md-auto text-center text-md-right">
