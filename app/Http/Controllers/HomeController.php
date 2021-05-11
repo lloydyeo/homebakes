@@ -19,4 +19,8 @@ class HomeController extends Controller
         }
         return response()->json(array_merge($request->all(), ['message' => 'Successfully subscribed!']));
     }
+
+    public function home(Request $request) {
+        return view('home');
+    }
 }
