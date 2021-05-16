@@ -84,15 +84,6 @@
                     background-size:cover;
                     ">
 			<div class="slider-inner">
-
-{{--                <div class="video-wrap" style="z-index: 1;">--}}
-{{--                    <video poster="{{ asset('images/homebakes-coming-soon.jpg') }}" preload="auto" loop="" autoplay="" muted="" style="width: 1665px; height: 936.562px; top: -52.2812px;">--}}
-{{--                        <source src="https://ak.picdn.net/shutterstock/videos/32759407/preview/stock-footage-cupcake-baking-in-oven-time-lapse-footage-of-cooking-muffins-uhd.webm" type="video/mp4">--}}
-{{--                        <source src="https://ak.picdn.net/shutterstock/videos/32759407/preview/stock-footage-cupcake-baking-in-oven-time-lapse-footage-of-cooking-muffins-uhd.webm" type="video/webm">--}}
-{{--                    </video>--}}
-{{--                    <div class="video-overlay" style="background-color: rgba(0,0,0,0.45);"></div>--}}
-{{--                </div>--}}
-
 				<div class="vertical-middle">
 					<div class="container py-5">
 
@@ -109,7 +100,7 @@
 						<div id="countdown-ex1" class="countdown countdown-large coming-soon mx-auto mb-5"
                              data-year="2021"
                              data-month="5"
-                             data-day="22"
+                             data-day="19"
                              style="max-width:700px;"></div>
 
 						<div class="subscribe-widget">

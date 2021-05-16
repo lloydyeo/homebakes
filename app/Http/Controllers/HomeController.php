@@ -11,7 +11,6 @@ class HomeController extends Controller
     }
 
     public function subscribe(Request $request) {
-
         $prefix = $request->has('prefix') ? $request->input('prefix') : '';
         $email = $request->has($prefix . 'email') ? $request->input($prefix . 'email') : '';
         if ($email) {
@@ -22,5 +21,9 @@ class HomeController extends Controller
 
     public function home(Request $request) {
         return view('home');
+    }
+
+    public function aboutUs(Request $request) {
+        return view('about-us');
     }
 }
