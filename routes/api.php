@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('subscribe', [HomeController::class, 'subscribe']);
+Route::any('subscribe', [HomeController::class, 'subscribe']);
