@@ -88,8 +88,8 @@
 					<div class="container py-5">
 
                         <div class="text-center w-100 pb-3">
-                            <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers" class="white-tint"
-                                 style="text-align: center; margin-left:auto; margin-right: auto; height:100px;"/>
+                            <img src="{{ asset('images/logos/logo2.png') }}" alt="HomeBakers" class="white-tint"
+                                 style="text-align: center; margin-left:auto; margin-right: auto; height:150px;"/>
                         </div>
 
 						<div class="heading-block text-center border-bottom-0">
