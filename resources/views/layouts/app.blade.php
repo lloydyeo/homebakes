@@ -100,12 +100,26 @@
             text-align: center;
         }
 
+        @media(min-width:320px) {
+            .header-row {
+                flex-wrap: nowrap;
+            }
+        }
+
         @media (min-width: 768px) {
             .recipe-category {
                 flex: 0 0 calc(50% - 20px);
                 max-width: calc(50% - 20px);
             }
         }
+
+        @media(max-width:992px) {
+            #primary-menu-trigger {
+                order: 4;
+            }
+        }
+
+
         @media (min-width: 992px) {
 
             .recipe-category {
@@ -209,13 +223,13 @@
 
                     <!-- Primary Navigation
                     ============================================= -->
-                    <nav class="primary-menu col-lg-4 order-lg-1">
+                    <nav class="primary-menu col-lg-5 order-lg-1">
                         <ul class="menu-container">
 {{--                            <li class="menu-item"><a class="menu-link" href="demo-restaurant-menu.html"><div>Menu</div></a></li>--}}
                         </ul>
                     </nav>
 
-                    <nav class="primary-menu col-lg-4 order-lg-3">
+                    <nav class="primary-menu col-lg-5 order-lg-3">
                         <ul class="menu-container justify-content-lg-end">
                             <li class="menu-item"><a class="menu-link" href="/"><div>Home</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('about-us') }}"><div>About</div></a></li>
