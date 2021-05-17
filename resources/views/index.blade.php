@@ -100,7 +100,7 @@
 
 						<div class="heading-block text-center border-bottom-0">
 							<h1>Something Fresh is Baking in our Oven...</h1>
-							<span>Subscribe now to an endless discovery of delicious home bakers!</span>
+							<span>Subscribe now to an endless discovery of delicious home bakes!</span>
 						</div>
 
 						<div id="countdown-ex1" class="countdown countdown-large coming-soon mx-auto mb-5"
