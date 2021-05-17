@@ -109,7 +109,21 @@
                              data-day="19"
                              style="max-width:700px;"></div>
 
-						<div class="subscribe-widget">
+                        <style>
+                            #lg-widget-form {
+                                display:none!important;
+                            }
+
+                            @media (min-width: 767px) {
+                                #sm-widget-form {
+                                    display:none!important;
+                                }
+                                #lg-widget-form {
+                                    display:block!important;
+                                }
+                            }
+                        </style>
+						<div id="lg-widget-form" class="subscribe-widget">
 							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="/api/subscribe" method="post" class="mb-0">
                                 <input type="hidden" name="prefix" value="widget-subscribe-form-">
@@ -125,6 +139,23 @@
 								</div>
 							</form>
 						</div>
+
+                        <div id="sm-widget-form" class="subscribe-widget">
+                            <div class="widget-subscribe-form-result"></div>
+                            <form id="widget-subscribe-form" action="/api/subscribe" method="post" class="mb-0">
+                                <input type="hidden" name="prefix" value="widget-subscribe-form-">
+                                <div class="input-group input-group-lg mx-auto" style="max-width:600px;">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="icon-email3"></i></div>
+                                    </div>
+                                    <input type="email" name="widget-subscribe-form-email"
+                                           class="form-control required email" placeholder="Enter your Email">
+                                </div>
+                                <div class="input-group input-group-lg mx-auto w-100 pt-3">
+                                    <button class="btn btn-block btn-primary" type="submit">Keep me updated!</button>
+                                </div>
+                            </form>
+                        </div>
 					</div>
 				</div>
 
