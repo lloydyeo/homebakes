@@ -16,7 +16,7 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'home']);
 Route::get('/home', [HomeController::class, 'home']);
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 

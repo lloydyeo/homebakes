@@ -17,7 +17,7 @@
     </style>
 @endsection
 
-@section('title', 'Blog')
+@section('title', $article->title)
 
 @section('content')
     <section id="page-title" class="page-title-parallax page-title-center border-bottom include-header"
