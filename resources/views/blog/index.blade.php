@@ -18,63 +18,25 @@
             <div id="news-section" class="container">
 
                 <div class="row posts-md col-mb-30 mb-0">
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="entry">
-                            <div class="entry-image">
-                                <a href="demos/restaurant/images/blogs/1.jpg">
-                                    <img src="{{ asset('canvas/demos/restaurant/images/blogs/1.jpg') }}" alt="Image 1"></a>
-                            </div>
-                            <div class="entry-title mt-0 p-4 title-xs nott">
-                                <div class="entry-meta mt-0 mb-2">
-                                    <ul>
-                                        <li><a href="#">08th Apr 2021</a></li>
-                                        <li><a href="#">Video</a></li>
-                                    </ul>
+                    @foreach ($articles as $article)
+                        <div class="col-lg-4 col-md-12">
+                            <div class="entry">
+                                <div class="entry-image mb-0">
+                                    <a href="/blog/{{ $article->slug }}">
+                                        <img src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="Image 1"></a>
                                 </div>
+                                <div class="entry-title mt-0 p-4 title-xs nott">
+                                    <div class="entry-meta mt-0 mb-2">
+                                        <ul>
+                                            <li><a href="/blog/{{ $article->slug }}">{{ $article->created_at->format('d F Y') }}</a></li>
+                                        </ul>
+                                    </div>
 
-                                <h2 class="mb-0"><a href="#">Make Ahead Super Green Vegan Quinoa Sandwich.</a></h2>
+                                    <h2 class="mb-0"><a href="/blog/{{ $article->slug }}">{{ $article->title }}</a></h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="entry">
-                            <div class="entry-image">
-                                <a href="demos/restaurant/images/blogs/2.jpg">
-                                    <img src="{{ asset('canvas/demos/restaurant/images/blogs/2.jpg') }}" alt="Image 2"></a>
-                            </div>
-                            <div class="entry-title mt-0 p-4 title-xs nott">
-                                <div class="entry-meta mt-0 mb-2">
-                                    <ul>
-                                        <li><a href="#">21th Mar 2021</a></li>
-                                        <li><a href="#">Book</a></li>
-                                    </ul>
-                                </div>
-
-                                <h2 class="mb-0"><a href="#">We Delivered Heart Shape Cornbread Waffles.</a></h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="entry">
-                            <div class="entry-image">
-                                <a href="demos/restaurant/images/blogs/3.jpg"><img
-                                        src="{{ asset('canvas/demos/restaurant/images/blogs/3.jpg') }}" alt="Image 3"></a>
-                            </div>
-                            <div class="entry-title mt-0 p-4 title-xs nott">
-                                <div class="entry-meta mt-0 mb-2">
-                                    <ul>
-                                        <li><a href="#">10th Feb 2021</a></li>
-                                        <li><a href="#">Recipe</a></li>
-                                    </ul>
-                                </div>
-
-                                <h2 class="mb-0"><a href="#">Top Delicious Recipes from world's Best Chefs.</a></h2>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 

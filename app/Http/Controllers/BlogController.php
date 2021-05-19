@@ -8,10 +8,11 @@ use App\Models\Article;
 class BlogController extends Controller
 {
     public function index(Request $request) {
-        return view('blog.index');
+        $articles = Article::all();
+        return view('blog.index', compact('articles'));
     }
 
     public function showArticle(Request $request, Article $article) {
-
+        return view('blog.inner', compact('article'));
     }
 }

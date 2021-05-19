@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,8 @@ class HomeController extends Controller
     }
 
     public function home(Request $request) {
-        return view('home');
+        $articles = Article::all();
+        return view('home', compact('articles'));
     }
 
     public function aboutUs(Request $request) {
