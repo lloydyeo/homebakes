@@ -1,5 +1,23 @@
 @extends ('layouts.app')
 
+@section('page-css')
+    <style>
+        @media(max-width: 425px) {
+            .slider-caption h2 {
+                text-align: center;
+                font-size: 12.5vw!important;
+                text-shadow: 2px 2px 12px rgba(0, 0, 0, 1.0)!important;
+            }
+            .slider-caption p {
+                text-align: center;
+                font-size: 5vw!important;
+                display: block!important;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.0);
+            }
+        }
+    </style>
+@endsection
+
 @section('title', 'Home')
 
 @section('content')
@@ -14,7 +32,7 @@
                             <div class="slider-caption">
                                 <div>
                                     <h2 class="font-secondary ls0 font-weight-normal nott" data-animate="fadeIn">Freshly Baked Treats</h2>
-                                    <p class="d-none d-sm-block font-primary" data-animate="fadeIn" data-delay="400">Discover from our list of home bakers to satisfy your cravings now!</p>
+                                    <p class="d-none d-sm-block d-lg-block font-primary" data-animate="fadeIn" data-delay="400">Discover from our list of home bakers to satisfy your cravings now!</p>
 
                                     {{--                                    <div class="input-group form-group mt-5" style="box-shadow:0 0 30px 4px rgb(0 0 0 / 80%);" data-animate="fadeIn" data-delay="800">--}}
                                     {{--                                        <input id="search-all" class="pl-3 form-control-pill text-white font-weight-bold--}}

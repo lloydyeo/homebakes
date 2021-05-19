@@ -26,6 +26,11 @@
             color:white!important;
         }
 
+        .entry-image img {
+            max-height:265px;
+            object-fit: cover;
+        }
+
         /**
          * Recipe Categories
          */
@@ -186,7 +191,25 @@
         #page-title {
             padding: 5.5rem 0;
         }
+
+        .cta-link {
+            padding: 8px 12px!important;
+            color: white!important;
+            border-radius: 5px;
+        }
+
+        .cta-link:hover {
+            transform: translate(0px, -5px);
+        }
     </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-198TK8CZHL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-198TK8CZHL');
+    </script>
 
     @yield('page-css')
 
@@ -234,7 +257,7 @@
                             <li class="menu-item"><a class="menu-link" href="/"><div>Home</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('about-us') }}"><div>About</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('blog.index') }}"><div>Blog</div></a></li>
-                            <li class="menu-item"><a class="menu-link color" href="javascript:void(0);"><div>Contact Us</div></a></li>
+                            <li class="menu-item"><a class="button button-red cta-link menu-link color" href="javascript:void(0);"><div>Join Us</div></a></li>
                         </ul>
                     </nav><!-- #primary-menu end -->
                 </div>
