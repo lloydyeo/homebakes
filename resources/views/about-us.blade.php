@@ -34,7 +34,7 @@
                         <p><span class="font-weight-bold">Homebakers Singapore</span> is a platform that features local homebakers.</p>
                         <p>Our dream is to shine a light on outstanding homebakers and share their delectable delights with the masses.</p>
                         <p>We also hope to optimize the homebaking process, so that homebakers may focus on what they do best: bake! With our help in future, we believe that logistical nightmares will one day be a thing of the past for the aspiring homebaking business.</p>
-                        <p>As the platform in its infancy, we would be delighted to start a conversation with homebakers to understand your needs.</p>
+                        <p>As the platform is in its infancy, we would be delighted to start a conversation with homebakers to understand your needs.</p>
                         <p class="font-weight-bold">We would love to hear from you either at our <a href="mailto:enquiry@homebakers.sg">email</a> or through Instagram DM <a href="https://www.instagram.com/homebakerssingapore/" target="_blank">@HomebakersSingapore</a>.</p>
                     </div>
 
