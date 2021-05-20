@@ -191,8 +191,9 @@
             }
         }
     </style>
+
     <style>
-        @media(max-width:320px) {
+        @media(max-width:425px) {
             #page-title {
                 padding: 2.1rem 0!important;
                 background-image:none!important;
