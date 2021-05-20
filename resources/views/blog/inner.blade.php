@@ -13,6 +13,7 @@
         figure a img {
             max-height:500px;
             width: auto;
+            object-fit: contain;
         }
     </style>
 @endsection
@@ -22,7 +23,7 @@
 @section('content')
     <section id="page-title" class="page-title-parallax page-title-center border-bottom include-header"
              style="background-image: url('{{ asset('canvas/demos/restaurant/images/sections/6.jpg') }}'); background-size: 100% auto;"
-             data-center="background-position:100% 100px;" data-top-bottom="background-position:100% -200px;">
+             data-center="background-position:100% 100px;" data-top-bottom="background-position:100% 0px;">
         <div class="container clearfix">
             <span class="font-primary ls1 mb-2 color" style="font-size: 14px;">&nbsp;</span>
             <h1 class="font-secondary text-capitalize ls0" style="font-size: 62px;">{{ $article->title }}</h1>

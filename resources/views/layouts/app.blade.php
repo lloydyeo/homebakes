@@ -105,9 +105,13 @@
             text-align: center;
         }
 
-        @media(min-width:320px) {
+        @media(min-width:768px) {
             .header-row {
                 flex-wrap: nowrap;
+            }
+
+            .primary-menu + .primary-menu {
+                border-top: 0;
             }
         }
 
@@ -188,6 +192,55 @@
         }
     </style>
     <style>
+        @media(max-width:320px) {
+            #page-title {
+                padding: 2.1rem 0!important;
+                background-image:none!important;
+            }
+
+            #page-title .container span {
+                display:none!important;
+            }
+
+            #logo {
+                flex: 1 0 auto!important;
+                padding: 0;
+            }
+
+            #small-placeholder,
+            #primary-menu-trigger {
+                flex: 1 1 auto;
+                justify-content: flex-end!important;
+            }
+        }
+
+        @media(max-width:768px) {
+            #page-title {
+                padding: 2.1rem 0!important;
+
+            }
+            #page-title .container span {
+                display:none!important;
+            }
+
+            nav.primary-menu {
+                display:none!important;
+            }
+
+            #primary-menu-trigger,
+            #logo,
+            #small-placeholder {
+                flex: 1 1 0;
+                min-height: 1px;
+                justify-content: center!important;
+            }
+
+            #primary-menu-trigger {
+                justify-content: flex-end!important;
+            }
+        }
+
+
         #page-title {
             padding: 5.5rem 0;
         }
@@ -230,7 +283,7 @@
         <div id="header-wrap">
             <div class="container">
                 <div class="header-row justify-content-lg-between">
-
+                    <div id="small-placeholder"></div>
                     <!-- Logo
                     ============================================= -->
                     <div id="logo" class="col-auto mr-lg-0 order-lg-2">
@@ -257,7 +310,11 @@
                             <li class="menu-item"><a class="menu-link" href="/"><div>Home</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('about-us') }}"><div>About</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('blog.index') }}"><div>Blog</div></a></li>
-                            <li class="menu-item"><a class="button button-red cta-link menu-link color" href="javascript:void(0);"><div>Join Us</div></a></li>
+                            <li class="menu-item"><a class="typeform-share button"
+                                                     href="https://form.typeform.com/to/gNgmYJjJ?typeform-medium=embed-snippet"
+                                                     data-mode="drawer_right"
+                                                     style="display:inline-block;text-decoration:none;background-color:#C02A42;color:white;cursor:pointer;font-family:'Poppins', sans-serif !important;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 22px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Join Us </a></li> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+{{--                            <li class="menu-item"><a class="button button-red cta-link menu-link color" href="javascript:void(0);"><div>Join Us</div></a></li>--}}
                         </ul>
                     </nav><!-- #primary-menu end -->
                 </div>

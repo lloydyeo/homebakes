@@ -1,6 +1,7 @@
 @extends ('layouts.app')
 
 @section('page-css')
+
 @endsection
 
 @section('title', 'About Us')
