@@ -32,7 +32,7 @@
 
         @media(min-width: 1024px) {
             #article-content {
-                text-align: left;
+                text-align: left!important;
             }
         }
     </style>
