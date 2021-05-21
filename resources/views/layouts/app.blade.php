@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
-
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
+    <meta name="author" content="HomeBakers.sg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Stylesheets
     ============================================= -->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('canvas/css/animate.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('canvas/css/magnific-popup.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('canvas/css/custom.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/colors.css') }}" type="text/css" />
+    @include('layouts.colors')
 
     <link rel="stylesheet" href="{{ asset('canvas/css/swiper.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('canvas/one-page/css/et-line.css') }}" type="text/css" />
@@ -191,7 +191,6 @@
             }
         }
     </style>
-
     <style>
         @media(max-width:425px) {
             #page-title {
@@ -266,8 +265,6 @@
     </script>
 
     @yield('page-css')
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>@yield('title') | HomeBakers</title>
 </head>
