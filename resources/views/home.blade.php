@@ -66,7 +66,7 @@
 
         <div style="overflow: visible;">
 
-            <div id="news-section" style="background: #FFF url('{{ asset('canvas/demos/restaurant/images/sections/7.jpg') }}') no-repeat top right; background-size: 100% auto; padding-top: 50px">
+            <div id="news-section" style="background: #FFF; background-size: 100% auto; padding-top: 50px">
                 <div class="container clearfix">
 
                     <div class="row">
@@ -87,7 +87,7 @@
                                 <div class="entry">
                                     <div class="entry-image mb-0">
                                         <a href="/blog/{{ $article->slug }}">
-                                            <img src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="Image 1"></a>
+                                            <img src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}"></a>
                                     </div>
                                     <div class="entry-title mt-0 p-4 title-xs nott">
                                         <div class="entry-meta mt-0 mb-2">
