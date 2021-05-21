@@ -24,8 +24,10 @@
             object-fit: contain;
         }
 
-        #article-content {
-            text-align:center!important;
+        @media(min-width: 320px) {
+            #article-content {
+                text-align:center!important;
+            }
         }
 
         @media(min-width: 1024px) {
