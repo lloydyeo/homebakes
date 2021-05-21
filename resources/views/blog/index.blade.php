@@ -3,7 +3,7 @@
 @section('title', 'Blog')
 
 @section('content')
-    <section id="page-title" class="page-title-parallax page-title-center border-bottom include-header"
+    <section id="page-title" class="page-title-parallax page-title-center border-bottom"
              style="background-image: url('{{ asset('canvas/demos/restaurant/images/sections/6.jpg') }}'); background-size: 100% auto;"
              data-center="background-position:100% 100px;" data-top-bottom="background-position:100% -200px;">
         <div class="container clearfix">
