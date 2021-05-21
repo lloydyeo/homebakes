@@ -6,14 +6,32 @@
             display: flex;
             align-content: center;
             justify-content: center;
+            width: 100%!important;
         }
+
+        figure a {
+            width:100%!important;
+        }
+
         .attachment__caption {
             display:none!important;
         }
+
         figure a img {
-            max-height:500px;
-            width: auto;
+            /*max-height:500px;*/
+            width: 100%!important;
+            height: auto;
             object-fit: contain;
+        }
+
+        #article-content {
+            text-align:center!important;
+        }
+
+        @media(min-width: 1024px) {
+            #article-content {
+                text-align: left;
+            }
         }
     </style>
 @endsection
@@ -34,7 +52,7 @@
         <div class="content-wrap pb-0" style="overflow: visible;">
             <div id="news-section" class="container">
                 <div class="row posts-md col-mb-30 mb-0">
-                    <div class="offset-lg-2 col-lg-8 text-center">
+                    <div id="article-content" class="offset-lg-2 col-lg-8">
                         {!! $article->content !!}
                     </div>
                     <div class="col-lg-12 d-flex justify-content-center mb-4">
