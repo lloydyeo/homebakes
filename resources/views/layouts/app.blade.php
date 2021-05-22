@@ -8,19 +8,20 @@
     <!-- Stylesheets
     ============================================= -->
     <link href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('canvas/css/bootstrap.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/style.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/css/dark.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/css/font-icons.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/css/animate.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/css/magnific-popup.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/css/custom.css') }}" type="text/css" />
-    @include('layouts.colors')
+{{--    <link rel="stylesheet" href="{{ asset('canvas/css/bootstrap.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/style.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/css/dark.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/css/font-icons.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/css/animate.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/css/magnific-popup.css') }}" type="text/css" />--}}
 
-    <link rel="stylesheet" href="{{ asset('canvas/css/swiper.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/one-page/css/et-line.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/demos/restaurant/restaurant.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('canvas/demos/restaurant/css/fonts.css') }}" type="text/css" />
+
+{{--    <link rel="stylesheet" href="{{ asset('canvas/css/swiper.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/one-page/css/et-line.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/demos/restaurant/restaurant.css') }}" type="text/css" />--}}
+{{--    <link rel="stylesheet" href="{{ asset('canvas/demos/restaurant/css/fonts.css') }}" type="text/css" />--}}
+    <link rel="stylesheet" href="{{ asset('canvas/css/app.css') }}" type="text/css" />
+    @include('layouts.colors')
     <style>
         #search-all::placeholder {
             color:white!important;
