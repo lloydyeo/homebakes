@@ -96,7 +96,7 @@
                                             </ul>
                                         </div>
 
-                                        <h2 class="mb-0"><a href="/blog/{{ $article->slug }}">{!! $article->title !!}</a></h2>
+                                        <h2 class="mb-0"><a href="/blog/{{ $article->slug }}">{{ $article->title }}</a></h2>
                                     </div>
                                 </div>
                             </div>
