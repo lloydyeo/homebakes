@@ -360,15 +360,15 @@
 
 <!-- JavaScripts
 ============================================= -->
-<script async src="{{ asset('canvas/js/jquery.js') }}"></script>
-<script defer src="{{ asset('canvas/js/plugins.min.js') }}"></script>
+<script src="{{ asset('canvas/js/jquery.js') }}"></script>
+<script src="{{ asset('canvas/js/plugins.min.js') }}"></script>
 
 <!-- For Countdown -->
 <script src="{{ asset('canvas/js/components/moment.js') }}"></script>
 
 <!-- Footer Scripts
 ============================================= -->
-<script defer src="{{ asset('canvas/js/functions.js') }}"></script>
+<script src="{{ asset('canvas/js/functions.js') }}"></script>
 
 <!-- Custom Carousel JS File -->
 <script>
