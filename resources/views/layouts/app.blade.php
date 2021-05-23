@@ -384,45 +384,16 @@
 
 <!-- JavaScripts
 ============================================= -->
-<script src="{{ asset('canvas/js/jquery.js') }}"></script>
-<script src="{{ asset('canvas/js/plugins.min.js') }}"></script>
+<script defer src="{{ asset('canvas/js/jquery.js') }}"></script>
+<script defer src="{{ asset('canvas/js/plugins.min.js') }}"></script>
 
 <!-- For Countdown -->
-<script src="{{ asset('canvas/js/components/moment.js') }}"></script>
+<script defer src="{{ asset('canvas/js/components/moment.js') }}"></script>
 
 <!-- Footer Scripts
 ============================================= -->
-<script src="{{ asset('canvas/js/functions.js') }}"></script>
-
-<!-- Custom Carousel JS File -->
-<script>
-    window.addEventListener('DOMContentLoaded', function() {
-        var carouselRTL = false;
-
-        if( $('body').hasClass('rtl') ) { carouselRTL = true; }
-
-        $(window).on( 'pluginCarouselReady', function(){
-            $('#food-menu-carousel').owlCarousel({
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-                items: 1,
-                mouseDrag: false,
-                dotsContainer: '#item-thumb',
-                rtl: carouselRTL
-            });
-
-            $('#dessert-menu-carousel').owlCarousel({
-                animateIn: 'fadeIn',
-                animateOut: 'fadeOut',
-                items: 1,
-                mouseDrag: false,
-                dotsContainer: '#item-thumb1',
-                rtl: carouselRTL
-            });
-        });
-    });
-</script>
-<script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-
+<script defer src="{{ asset('canvas/js/functions.js') }}"></script>
+<script defer src="{{ asset('js/homepage.js') }}"></script>
+<script>(function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 </body>
 </html>
