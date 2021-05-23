@@ -145,6 +145,7 @@
 ============================================= -->
 <div id="gotoTop" class="icon-line-arrow-up"></div>
 
+<link rel="preload" href="{{ asset('canvas/css/app.css') }}" as="style" onload="this.rel='stylesheet'">
 <link rel="stylesheet" href="{{ asset('canvas/css/app.css') }}" type="text/css" />
 @include('layouts.colors')
 <style>
