@@ -368,28 +368,29 @@
 
 <!-- Custom Carousel JS File -->
 <script defer>
+    window.addEventListener('DOMContentLoaded', function() {
+        var carouselRTL = false;
 
-    var carouselRTL = false;
+        if( $('body').hasClass('rtl') ) { carouselRTL = true; }
 
-    if( $('body').hasClass('rtl') ) { carouselRTL = true; }
+        $(window).on( 'pluginCarouselReady', function(){
+            $('#food-menu-carousel').owlCarousel({
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                items: 1,
+                mouseDrag: false,
+                dotsContainer: '#item-thumb',
+                rtl: carouselRTL
+            });
 
-    $(window).on( 'pluginCarouselReady', function(){
-        $('#food-menu-carousel').owlCarousel({
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
-            items: 1,
-            mouseDrag: false,
-            dotsContainer: '#item-thumb',
-            rtl: carouselRTL
-        });
-
-        $('#dessert-menu-carousel').owlCarousel({
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
-            items: 1,
-            mouseDrag: false,
-            dotsContainer: '#item-thumb1',
-            rtl: carouselRTL
+            $('#dessert-menu-carousel').owlCarousel({
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                items: 1,
+                mouseDrag: false,
+                dotsContainer: '#item-thumb1',
+                rtl: carouselRTL
+            });
         });
     });
 </script>
