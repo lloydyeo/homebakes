@@ -97,7 +97,6 @@
                                                 @endif
 
                                             </picture>
-{{--                                            <img height="265" src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}">--}}
                                         </a>
                                     </div>
                                     <div class="entry-title mt-0 p-4 title-xs nott">
@@ -106,12 +105,12 @@
                                                 <li><a href="/blog/{{ $article->slug }}">{{ $article->created_at->format('d F Y') }}</a></li>
                                             </ul>
                                         </div>
-
                                         <h2 class="mb-0"><a href="/blog/{{ $article->slug }}">{{ $article->title }}</a></h2>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
+                    </div>
                     </div>
 
                     <div class="d-flex justify-content-center mb-4">
