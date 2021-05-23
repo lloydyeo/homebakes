@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
+    <title>@yield('title') | HomeBakers</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="HomeBakers.sg" />
     <meta name="description" content="Homebakers Singapore is a platform that features local homebakers." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="{{ $theme_primary_color }}"/>
+    <meta name=”robots” content="index, follow">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@yield('title') | HomeBakers" />
+    <meta property="og:description" content="Homebakers Singapore is a platform that features local homebakers." />
+    <meta property="og:image" content="{{ asset('images/logos/logo.jpg') }}" />
+    <meta property="og:url" content="https://www.homebakers.sg" />
+    <meta property="og:site_name" content="Homebakers Singapore" />
 
+    <link rel="canonical" href="https://homebakers.sg/" />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet">
@@ -38,8 +47,6 @@
     </script>
 
     @yield('page-css')
-
-    <title>@yield('title') | HomeBakers</title>
 </head>
 
 <body class="stretched sticky-footer page-transition">
