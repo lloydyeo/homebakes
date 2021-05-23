@@ -76,7 +76,6 @@
                                 <source srcset="{{ asset('images/logos/logo-resize.jpg') }}" type="image/jpeg">
                                 <img height="130" width="130" class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
                             </picture>
-{{--                            <img class="my-2" src="{{ asset('images/logos/logo.jpg') }}" alt="HomeBakers.sg">--}}
                         </a>
                         <a href="/" class="retina-logo">
                             <picture>
@@ -121,7 +120,7 @@
 
     <!-- Footer
     ============================================= -->
-    <footer id="footer" class="dark" style="background: url('{{ asset('canvas/demos/restaurant/images/footer-bg.jpg') }}')  repeat center center / cover; background-size: auto 100%;; padding: 20px 0 22px">
+    <footer id="footer" class="dark" style="background-image: url('{{ asset('canvas/demos/restaurant/images/footer-bg.webp') }}'); background: url('{{ asset('canvas/demos/restaurant/images/footer-bg-resize.jpg') }}')  repeat center center / cover; background-size: auto 100%;; padding: 20px 0 22px">
         <!-- Copyrights
         ============================================= -->
         <div id="copyrights" class="bg-transparent pb-4">
