@@ -74,14 +74,14 @@
                             <picture>
                                 <source srcset="{{ asset('images/logos/logo.webp') }}" type="image/webp">
                                 <source srcset="{{ asset('images/logos/logo-resize.jpg') }}" type="image/jpeg">
-                                <img height="130" width="130" class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
+                                <img height="130" class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
                             </picture>
                         </a>
                         <a href="/" class="retina-logo">
                             <picture>
                                 <source srcset="{{ asset('images/logos/logo.webp') }}" type="image/webp">
                                 <source srcset="{{ asset('images/logos/logo-resize.jpg') }}" type="image/jpeg">
-                                <img height="130" width="130" class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
+                                <img height="130" class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
                             </picture>
                         </a>
                     </div><!-- #logo end -->
