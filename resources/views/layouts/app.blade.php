@@ -33,7 +33,7 @@
     <title>@yield('title') | HomeBakers</title>
 </head>
 
-<body class="stretched sticky-footer">
+<body class="stretched sticky-footer page-transition">
 
 <!-- Document Wrapper
 ============================================= -->
