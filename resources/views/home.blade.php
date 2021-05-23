@@ -133,7 +133,7 @@
                 </div>
                 <div class="d-flex justify-content-center mb-4">
                     <a href="{{ route('blog.index') }}"
-                       class="button button-3d button-mini button-rounded button-brown">Read All Articles</a>
+                       class="button button-3d button-mini button-rounded button-red">Read All Articles</a>
                 </div>
             </div>
         </div>
