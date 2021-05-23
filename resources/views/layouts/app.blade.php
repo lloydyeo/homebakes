@@ -113,7 +113,7 @@
 ============================================= -->
 <div id="gotoTop" class="icon-line-arrow-up"></div>
 
-<link rel="preload" as="style" href="{{ asset('canvas/css/fonts/font-icons.woff') }}" />
+<link rel="preload" as="font" href="{{ asset('canvas/css/fonts/font-icons.woff') }}" />
 <link href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('canvas/css/app.css') }}" type="text/css" />
 @include('layouts.colors')
