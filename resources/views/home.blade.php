@@ -85,19 +85,20 @@
                                         <a href="/blog/{{ $article->slug }}">
                                             <picture>
                                                 @if ($article->cover_image_webp)
-                                                    <source srcset="{{ Storage::disk('s3')->url($article->cover_image_webp) }}" type="image/webp">
+                                                    <source srcset="{{ Storage::disk('s3')->url($article->cover_image_webp) }}" type="image/webp" />
                                                 @endif
 
                                                 @if ($article->cover_image_resized)
-                                                    <source srcset="{{ Storage::disk('s3')->url($article->cover_image_resized) }}" type="image/jpeg">
-                                                    <img height="265" class="my-2" src="{{ Storage::disk('s3')->url($article->cover_image_resized) }}" alt="{{ $article->title }}">
+                                                    <source srcset="{{ Storage::disk('s3')->url($article->cover_image_resized) }}" type="image/jpeg" />
+                                                    <img height="265" class="my-2" src="{{ Storage::disk('s3')->url($article->cover_image_resized) }}" alt="{{ $article->title }}" />
                                                 @else
-                                                    <source srcset="{{ Storage::disk('s3')->url($article->cover_image) }}" type="image/jpeg">
-                                                    <img height="265" class="my-2" src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}">
+                                                    <source srcset="{{ Storage::disk('s3')->url($article->cover_image) }}" type="image/jpeg" />
+                                                    <img height="265" class="my-2" src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}" />
                                                 @endif
 
                                             </picture>
-{{--                                            <img height="265" src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}"></a>--}}
+{{--                                            <img height="265" src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}">--}}
+                                        </a>
                                     </div>
                                     <div class="entry-title mt-0 p-4 title-xs nott">
                                         <div class="entry-meta mt-0 mb-2">
