@@ -33,7 +33,6 @@
                                 <div>
                                     <h2 class="font-secondary ls0 font-weight-normal nott" data-animate="fadeIn">Freshly Baked Treats</h2>
                                     <p class="d-none d-sm-block d-lg-block font-primary" data-animate="fadeIn" data-delay="400">Discover from our list of home bakers to satisfy your cravings now!</p>
-
                                     {{--                                    <div class="input-group form-group mt-5" style="box-shadow:0 0 30px 4px rgb(0 0 0 / 80%);" data-animate="fadeIn" data-delay="800">--}}
                                     {{--                                        <input id="search-all" class="pl-3 form-control-pill text-white font-weight-bold--}}
                                     {{--                                            form-control form-control-plaintext border-0"--}}
@@ -50,12 +49,9 @@
                         <div class="swiper-slide-bg" style="background-image: url('{{ asset('images/homebaker-splash.jpg') }}'),url('{{ asset('images/homebaker-coming-soon.webp') }}');"></div>
                     </div>
                 </div>
-
                 <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
                 <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
-
             </div>
-
         </div>
     </section>
     <!-- Content

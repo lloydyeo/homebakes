@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="HomeBakers.sg" />
+    <meta name="description" content="Homebakers Singapore is a platform that features local homebakers." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
