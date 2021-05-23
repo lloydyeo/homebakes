@@ -356,7 +356,7 @@
 
 <!-- JavaScripts
 ============================================= -->
-<script async src="{{ asset('canvas/js/jquery.js') }}"></script>
+<script defer src="{{ asset('canvas/js/jquery.js') }}"></script>
 <script defer src="{{ asset('canvas/js/plugins.min.js') }}"></script>
 
 <!-- For Countdown -->
@@ -367,7 +367,7 @@
 <script defer src="{{ asset('canvas/js/functions.js') }}"></script>
 
 <!-- Custom Carousel JS File -->
-<script>
+<script defer>
 
     var carouselRTL = false;
 
