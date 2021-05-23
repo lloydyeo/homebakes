@@ -5,6 +5,7 @@
     <meta name="author" content="HomeBakers.sg" />
     <meta name="description" content="Homebakers Singapore is a platform that features local homebakers." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="{{ $theme_primary_color }}"/>
 
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900&display=swap" as="style">
