@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-    <title>@yield('title') | HomeBakers</title>
+    <title>@yield('title') | HomeBakers Singapore</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="HomeBakers.sg" />
     <meta name="description" content="Homebakers Singapore is a platform that features local homebakers." />
