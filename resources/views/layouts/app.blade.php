@@ -71,9 +71,20 @@
                     ============================================= -->
                     <div id="logo" class="col-auto mr-lg-0 order-lg-2">
                         <a href="/" class="standard-logo">
-                            <img class="my-2" src="{{ asset('images/logos/logo.jpg') }}" alt="HomeBakers.sg"></a>
+                            <picture>
+                                <source srcset="{{ asset('images/logos/logo.webp') }}" type="image/webp">
+                                <source srcset="{{ asset('images/logos/logo-resize.jpg') }}" type="image/jpeg">
+                                <img class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
+                            </picture>
+{{--                            <img class="my-2" src="{{ asset('images/logos/logo.jpg') }}" alt="HomeBakers.sg">--}}
+                        </a>
                         <a href="/" class="retina-logo">
-                            <img class="my-2" src="{{ asset('images/logos/logo.jpg') }}" alt="HomeBakers.sg"></a>
+                            <picture>
+                                <source srcset="{{ asset('images/logos/logo.webp') }}" type="image/webp">
+                                <source srcset="{{ asset('images/logos/logo-resize.jpg') }}" type="image/jpeg">
+                                <img class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
+                            </picture>
+                        </a>
                     </div><!-- #logo end -->
 
                     <div id="primary-menu-trigger">
