@@ -74,7 +74,7 @@
                             <picture>
                                 <source srcset="{{ asset('images/logos/logo.webp') }}" type="image/webp">
                                 <source srcset="{{ asset('images/logos/logo-resize.jpg') }}" type="image/jpeg">
-                                <img class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
+                                <img height="130" width="130" class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
                             </picture>
 {{--                            <img class="my-2" src="{{ asset('images/logos/logo.jpg') }}" alt="HomeBakers.sg">--}}
                         </a>
@@ -82,7 +82,7 @@
                             <picture>
                                 <source srcset="{{ asset('images/logos/logo.webp') }}" type="image/webp">
                                 <source srcset="{{ asset('images/logos/logo-resize.jpg') }}" type="image/jpeg">
-                                <img class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
+                                <img height="130" width="130" class="my-2" src="{{ asset('images/logos/logo-resize.jpg') }}" alt="HomeBakers.sg">
                             </picture>
                         </a>
                     </div><!-- #logo end -->
