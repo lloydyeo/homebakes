@@ -15,6 +15,11 @@
     <meta property="og:url" content="https://www.homebakers.sg" />
     <meta property="og:site_name" content="Homebakers Singapore" />
 
+    <link rel="shortcut icon" type="image/jpg" href="{{ asset('images/logos/favicon.ico') }}"/>
+    <link rel="icon" href="{{ asset('images/logos/favicon.ico') }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ asset('images/logos/favicon-16x16.png') }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ asset('images/logos/favicon-32x32.png') }}" sizes="32x32">
+
     <link rel="canonical" href="https://homebakers.sg/" />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400i,700,700i,900&display=swap" as="style">
