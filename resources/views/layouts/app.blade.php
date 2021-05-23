@@ -356,19 +356,19 @@
 
 <!-- JavaScripts
 ============================================= -->
-<script defer src="{{ asset('canvas/js/jquery.js') }}"></script>
-<script defer src="{{ asset('canvas/js/plugins.min.js') }}"></script>
+<script src="{{ asset('canvas/js/jquery.js') }}"></script>
+<script src="{{ asset('canvas/js/plugins.min.js') }}"></script>
 
 <!-- For Countdown -->
-<script defer src="{{ asset('canvas/js/components/moment.js') }}"></script>
+<script src="{{ asset('canvas/js/components/moment.js') }}"></script>
 
 <!-- Footer Scripts
 ============================================= -->
-<script defer src="{{ asset('canvas/js/functions.js') }}"></script>
+<script src="{{ asset('canvas/js/functions.js') }}"></script>
 
 <!-- Custom Carousel JS File -->
-<script defer>
-    window.addEventListener('DOMContentLoaded', function() {
+<script>
+    // window.addEventListener('DOMContentLoaded', function() {
         var carouselRTL = false;
 
         if( $('body').hasClass('rtl') ) { carouselRTL = true; }
@@ -392,7 +392,7 @@
                 rtl: carouselRTL
             });
         });
-    });
+    // });
 </script>
 <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 
