@@ -97,7 +97,7 @@
                                                 @endif
 
                                             </picture>
-                                            <img height="265" src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}"></a>
+{{--                                            <img height="265" src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="{{ $article->title }}"></a>--}}
                                     </div>
                                     <div class="entry-title mt-0 p-4 title-xs nott">
                                         <div class="entry-meta mt-0 mb-2">
