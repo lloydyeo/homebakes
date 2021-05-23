@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide-bg" style="background-image: url('{{ asset('images/homebaker-coming-soon.jpg') }}');"></div>
+                        <div class="swiper-slide-bg" style="background-image: url('{{ asset('images/homebaker-splash.jpg') }}'),url('{{ asset('images/homebaker-coming-soon.webp') }}');"></div>
                     </div>
                 </div>
 
