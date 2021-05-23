@@ -23,7 +23,30 @@
                             <div class="entry">
                                 <div class="entry-image mb-0">
                                     <a href="/blog/{{ $article->slug }}">
-                                        <img src="{{ Storage::disk('s3')->url($article->cover_image) }}" alt="Image 1"></a>
+                                        <picture>
+                                            @if ($article->cover_image_webp)
+                                                <source
+                                                    srcset="{{ Storage::disk('s3')->url($article->cover_image_webp) }}"
+                                                    type="image/webp"/>
+                                            @endif
+
+                                            @if ($article->cover_image_resized)
+                                                <source
+                                                    srcset="{{ Storage::disk('s3')->url($article->cover_image_resized) }}"
+                                                    type="image/jpeg"/>
+                                                <img height="265" class="my-2"
+                                                     src="{{ Storage::disk('s3')->url($article->cover_image_resized) }}"
+                                                     alt="{{ $article->title }}"/>
+                                            @else
+                                                <source
+                                                    srcset="{{ Storage::disk('s3')->url($article->cover_image) }}"
+                                                    type="image/jpeg"/>
+                                                <img height="265" class="my-2"
+                                                     src="{{ Storage::disk('s3')->url($article->cover_image) }}"
+                                                     alt="{{ $article->title }}"/>
+                                            @endif
+
+                                        </picture>
                                 </div>
                                 <div class="entry-title mt-0 p-4 title-xs nott">
                                     <div class="entry-meta mt-0 mb-2">
