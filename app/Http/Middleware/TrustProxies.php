@@ -23,7 +23,7 @@ class TrustProxies extends Middleware
     protected $headers = Request::HEADER_X_FORWARDED_FOR | Request::HEADER_X_FORWARDED_HOST | Request::HEADER_X_FORWARDED_PORT | Request::HEADER_X_FORWARDED_PROTO | Request::HEADER_X_FORWARDED_AWS_ELB;
 
     public function handle(Request $request, Closure $next) {
-        $request->setTrustedProxies([$request->getClientIp()]);
+        $request->setTrustedProxies([$request->getClientIp()], $this->headers);
         if (!$request->secure()) {
             return redirect()->secure($request->getRequestUri());
         }
