@@ -69,12 +69,12 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png">
+{{--							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png">--}}
 {{--                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers">--}}
-                            </a>
-							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">
+{{--                            </a>--}}
+{{--							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">--}}
 {{--                                <img src="{{ asset('images/logos/logo.png') }}" alt="HomeBakers">--}}
-                            </a>
+{{--                            </a>--}}
 						</div><!-- #logo end -->
 					</div>
 				</div>

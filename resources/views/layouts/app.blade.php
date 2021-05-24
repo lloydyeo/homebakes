@@ -350,7 +350,7 @@
         }
 
         nav.primary-menu {
-            display:none!important;
+            border-top: none;
         }
 
         #primary-menu-trigger,
@@ -363,6 +363,10 @@
 
         #primary-menu-trigger {
             justify-content: flex-end!important;
+        }
+
+        .primary-menu {
+            order: 4;
         }
     }
 
