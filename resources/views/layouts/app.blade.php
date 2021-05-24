@@ -103,7 +103,7 @@
                             <li class="menu-item"><a class="menu-link" href="/"><div>Home</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('about-us') }}"><div>About</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('blog.index') }}"><div>Blog</div></a></li>
-                            <li class="menu-item"><a class="typeform-share button"
+                            <li class="menu-item"><a class="typeform-share button" id="typeform-button"
                                                      href="https://form.typeform.com/to/gNgmYJjJ?typeform-medium=embed-snippet"
                                                      data-mode="drawer_right" rel="noreferrer"
                                                      style="display:inline-block;text-decoration:none;background-color:{{ $theme_primary_color }};color:white;cursor:pointer;font-family:'Poppins', sans-serif !important;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 22px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Join Us </a></li>
@@ -367,6 +367,10 @@
 
         .primary-menu {
             order: 4;
+        }
+
+        #typeform-button {
+            margin-top: 14px;
         }
     }
 
