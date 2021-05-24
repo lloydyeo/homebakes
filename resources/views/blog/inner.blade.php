@@ -58,7 +58,7 @@
                         {!! $article->content !!}
                     </div>
                     <div class="col-lg-12 d-flex justify-content-center mb-4">
-                        <a href="{{ route('blog.index') }}" class="button button-3d button-mini button-rounded button-brown">Read More Articles</a>
+                        <a href="{{ route('blog.index') }}" class="button button-3d button-mini button-rounded button-red">Read More Articles</a>
                     </div>
                 </div>
             </div>

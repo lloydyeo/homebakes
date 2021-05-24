@@ -131,7 +131,11 @@
                     </div>
                     <div class="col-12 col-md-auto text-center text-md-right">
                         <div class="copyrights-menu copyright-links clearfix">
-                            <a href="/">Home</a>/<a href="{{ route('about-us') }}">About Us</a>/<a href="#">Contact</a>
+                            <a href="/">Home</a>/
+                            <a href="{{ route('about-us') }}">About Us</a>/
+                            <a href="{{ route('blog.index') }}">Blog</a>/
+                            <a href="#blog" id="footer-typeform-button">Join Us</a>
+
                         </div>
                     </div>
                 </div>
@@ -374,7 +378,6 @@
         }
     }
 
-
     #page-title {
         padding: 5.5rem 0;
     }
@@ -387,6 +390,10 @@
 
     .cta-link:hover {
         transform: translate(0px, -5px);
+    }
+
+    .page-item.active .page-link, .page-link:focus, .page-link:hover {
+        border-color: #C02A42!important;
     }
 </style>
 
@@ -402,6 +409,11 @@
 ============================================= -->
 <script defer src="{{ asset('canvas/js/functions.js') }}"></script>
 <script defer src="{{ asset('js/homepage.js') }}"></script>
+<script>
+    document.getElementById('footer-typeform-button').addEventListener('click', function(){
+        document.getElementById('typeform-button').click();
+    });
+</script>
 <script>(function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 </body>
 </html>
