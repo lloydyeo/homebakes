@@ -24,7 +24,7 @@ class HomeController extends Controller
     }
 
     public function home(Request $request) {
-        $articles = Article::all();
+        $articles = Article::where('published', 1)->get();
         return view('home', compact('articles'));
     }
 

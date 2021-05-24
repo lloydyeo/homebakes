@@ -8,7 +8,7 @@ use App\Models\Article;
 class BlogController extends Controller
 {
     public function index(Request $request) {
-        $articles = Article::all();
+        $articles = Article::where('published', 1)->get();
         return view('blog.index', compact('articles'));
     }
 
