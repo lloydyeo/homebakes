@@ -134,7 +134,7 @@
                             <a href="/">Home</a>/
                             <a href="{{ route('about-us') }}">About Us</a>/
                             <a href="{{ route('blog.index') }}">Blog</a>/
-                            <a href="#blog" id="footer-typeform-button">Join Us</a>
+                            <a href="#joinus" id="footer-typeform-button">Join Us</a>
 
                         </div>
                     </div>
