@@ -30,6 +30,7 @@ mix.webpackConfig({
 mix.js('resources/js/app.js', 'public/js');
 mix.js('resources/js/homepage.js', 'public/js');
 mix.copy('resources/css/colors.css', 'public/css');
+mix.copy('resources/sitemap.xml', 'public');
 mix.copyDirectory('resources/images', 'public/images');
 mix.copy('resources/canvas/demos/restaurant/images/sketch-header.png', 'public/canvas/css/images');
 mix.copyDirectory('resources/canvas', 'public/canvas');
