@@ -35,6 +35,12 @@
                 text-align: left!important;
             }
         }
+
+        #article-content h2 {
+            margin-bottom: 0!important;
+            color: #C02A42;
+        }
+
     </style>
 @endsection
 
@@ -65,4 +71,25 @@
         </div>
         <div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch-header.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;"></div>
     </section>
+@endsection
+
+@section('page-js')
+    <script>
+        document.querySelectorAll('#article-content h1').forEach( element => {
+            //create new h1 element
+            const newElement = document.createElement('h2');
+            //set the inner html to the original h2 element
+            newElement.innerHTML = element.innerHTML;
+            //take all attributes from original element and assign them to the new one
+            Array.from(element.attributes).forEach( attr => {
+                newElement.setAttribute(attr.nodeName, attr.nodeValue)
+            })
+            //replace the node in the dom
+            element.parentNode.replaceChild(newElement, element);
+        });
+
+        document.querySelectorAll('#article-content a').forEach( element => {
+            element.setAttribute('target', '_blank');
+        });
+    </script>
 @endsection
