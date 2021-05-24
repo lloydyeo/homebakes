@@ -370,7 +370,7 @@
         }
 
         #typeform-button {
-            margin-top: 14px;
+            margin-top: 14px!important;
         }
     }
 
