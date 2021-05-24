@@ -67,7 +67,7 @@
                 <div class="container clearfix">
                     <div class="row align-items-center">
                         <div class="col-sm-6 mr-auto">
-                            <h4 class="mb-0 d-flex justify-content-center justify-content-sm-start"><small class="text-muted">Showing Page: <a href="#">1</a> of 1 Pages</small></h4>
+                            <p class="mb-0 d-flex justify-content-center justify-content-sm-start"><small style="font-family:Poppins,sans-serif!important;" class="text-muted">Showing Page: <a href="#">1</a> of 1 Pages</small></p>
                         </div>
                         <div class="col-sm-6">
                             <ul class="pagination justify-content-center justify-content-sm-end mt-3 mt-sm-0 mb-0">
