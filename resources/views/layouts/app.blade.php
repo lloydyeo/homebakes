@@ -234,7 +234,7 @@
         text-align: center;
     }
 
-    @media(min-width:768px) {
+    @media(min-width:1024px) {
         .header-row {
             flex-wrap: nowrap;
         }
@@ -321,7 +321,7 @@
     }
 </style>
 <style>
-    @media(max-width:425px) {
+    @media(max-width: 1024px) {
         #page-title {
             padding: 2.1rem 0!important;
             background-image:none!important;
@@ -343,7 +343,7 @@
         }
     }
 
-    @media(max-width:768px) {
+    @media(max-width:1024px) {
         #page-title {
             padding: 2.1rem 0!important;
 
