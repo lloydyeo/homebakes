@@ -24,7 +24,7 @@ class HomeController extends Controller
     }
 
     public function home(Request $request) {
-        $articles = Article::where('published', 1)->get();
+        $articles = Article::where('published', 1)->whereNotNull('cover_image')->get();
         return view('home', compact('articles'));
     }
 
