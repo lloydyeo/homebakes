@@ -19,7 +19,7 @@
 
         figure a img {
             /*max-height:500px;*/
-            width: 100%!important;
+            /*width: 100%!important;*/
             height: auto;
             object-fit: contain;
         }
