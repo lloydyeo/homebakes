@@ -26,13 +26,15 @@
 
         @media(min-width: 320px) {
             #article-content {
-                text-align:center!important;
+                text-align:left!important;
+                font-size: 0.8rem;
             }
         }
 
         @media(min-width: 1024px) {
             #article-content {
                 text-align: justify!important;
+                font-size: 1rem;
             }
         }
 
