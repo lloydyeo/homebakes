@@ -33,7 +33,7 @@
                         <div class="container dark">
                             <div class="slider-caption">
                                 <div>
-                                    <h2 class="font-secondary ls0 font-weight-normal nott" data-animate="fadeIn">Freshly
+                                    <h2 class="font-secondary ls0 nott" data-animate="fadeIn">Freshly
                                         Baked Treats</h2>
                                     <p class="d-none d-sm-block d-lg-block font-primary" data-animate="fadeIn"
                                        data-delay="400">Discover from our list of home bakers to satisfy your cravings
