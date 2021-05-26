@@ -300,7 +300,6 @@
     }
 </style>
 <style>
-
     @media(max-width: 1024px) {
         #page-title {
             padding: 2.1rem 0!important;
@@ -431,6 +430,12 @@
         }
     }
 </style>
+<style>
+    @if ($global_custom_css)
+      {!! $global_custom_css !!}
+    @endif
+</style>
+@yield('page-custom-css')
 
 <!-- JavaScripts
 ============================================= -->

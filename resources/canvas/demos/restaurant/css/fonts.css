@@ -4,7 +4,16 @@
 	Replace your Fonts as necessary
 -----------------------------------------------------------------*/
 
-
+#logo a,
+.font-primary,
+.menu-link,
+h2 {
+    font-family: Poppins, sans-serif !important;
+}
+.font-secondary {
+    font-family: Cookie, cursive !important;
+    font-weight: 400 !important;
+}
 
 body,
 small,
