@@ -34,46 +34,6 @@
 
 @section('page-custom-css')
     <style>
-        figure {
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            width: 100%!important;
-        }
-
-        figure a {
-            width:100%!important;
-        }
-
-        .attachment__caption {
-            display:none!important;
-        }
-
-        figure a img {
-            /*max-height:500px;*/
-            /*width: 100%!important;*/
-            height: auto;
-            object-fit: contain;
-        }
-
-        @media(min-width: 320px) {
-            #article-content {
-                text-align:left!important;
-                font-size: 0.8rem;
-            }
-        }
-
-        @media(min-width: 1024px) {
-            #article-content {
-                text-align: justify!important;
-                font-size: 1rem;
-            }
-        }
-
-        #article-content h2 {
-            margin-bottom: 0!important;
-            color: #C02A42;
-        }
         @if ($blog_custom_css)
             {!! $blog_custom_css !!}
         @endif
