@@ -8,7 +8,7 @@
              data-center="background-position:100% 100px;" data-top-bottom="background-position:100% -200px;">
         <div class="container clearfix">
             <span class="ls1 mb-2">The latest on home bakers!</span>
-            <h1 class="text-capitalize ls0">Our Latest News</h1>
+            <h1 class="font-secondary text-capitalize ls0">Our Latest News</h1>
         </div>
 
     </section><!-- #page-title end -->
