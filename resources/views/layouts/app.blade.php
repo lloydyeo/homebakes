@@ -387,6 +387,10 @@
     .copyright-links a:hover {
         color:{{ $theme_primary_color }};
     }
+
+    .page-link, .page-link:focus, .page-link:hover {
+        border-color:{{ $theme_primary_color }};
+    }
 </style>
 
 <!-- JavaScripts
