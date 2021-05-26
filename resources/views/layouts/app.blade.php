@@ -299,6 +299,11 @@
     }
 </style>
 <style>
+    @media(min-width:1024px) {
+        #slider-divider {
+            display:block;
+        }
+    }
     @media(max-width: 1024px) {
         #page-title {
             padding: 2.1rem 0!important;
@@ -323,8 +328,11 @@
 
     @media(max-width:1024px) {
         #page-title {
-            padding: 2.1rem 0!important;
-
+            padding: 5.1rem 0!important;
+            background-color:#F2EADE;
+        }
+        #page-title h1 {
+            color: {{ $theme_primary_color }};
         }
         #page-title .container span {
             display:none!important;
@@ -352,6 +360,13 @@
 
         #typeform-button {
             margin-top: 14px!important;
+        }
+    }
+
+    @media (max-width: 425px) {
+        #page-title {
+            padding: 2.1rem 0!important;
+            background-color:#F2EADE;
         }
     }
 
@@ -396,11 +411,8 @@
         #welcome-text {
             font-size: 35px;;
         }
-    }
-
-    @media(min-width:425px) {
-        #welcome-text {
-            font-size: 44px;;
+        #slider-divider {
+            display:none;
         }
     }
 
@@ -414,6 +426,7 @@
         #welcome-text {
             font-size: 56px;
         }
+
     }
 </style>
 

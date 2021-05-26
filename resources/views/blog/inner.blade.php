@@ -54,7 +54,7 @@
              data-center="background-position:100% 100px;" data-top-bottom="background-position:100% 0px;">
         <div class="container clearfix">
             <span class="font-primary ls1 mb-2 color" style="font-size: 14px;">&nbsp;</span>
-            <h1 class="font-secondary text-capitalize ls0" style="font-size: 62px;">{{ $article->title }}</h1>
+            <h1 class="font-secondary text-capitalize ls0">{{ $article->title }}</h1>
         </div>
     </section><!-- #page-title end -->
 
