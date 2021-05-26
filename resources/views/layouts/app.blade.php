@@ -299,11 +299,7 @@
     }
 </style>
 <style>
-    @media(min-width:1024px) {
-        #slider-divider {
-            display:block;
-        }
-    }
+
     @media(max-width: 1024px) {
         #page-title {
             padding: 2.1rem 0!important;
@@ -426,7 +422,12 @@
         #welcome-text {
             font-size: 56px;
         }
+    }
 
+    @media(min-width:1024px) {
+        #slider-divider {
+            display:block;
+        }
     }
 </style>
 
