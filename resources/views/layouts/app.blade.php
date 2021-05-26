@@ -391,6 +391,30 @@
     .page-link, .page-link:focus, .page-link:hover {
         border-color:{{ $theme_primary_color }};
     }
+
+    @media(min-width:320px) {
+        #welcome-text {
+            font-size: 35px;;
+        }
+    }
+
+    @media(min-width:425px) {
+        #welcome-text {
+            font-size: 44px;;
+        }
+    }
+
+    @media(min-width:425px) {
+        #welcome-text {
+            font-size: 44px;;
+        }
+    }
+
+    @media(min-width:768px) {
+        #welcome-text {
+            font-size: 56px;
+        }
+    }
 </style>
 
 <!-- JavaScripts

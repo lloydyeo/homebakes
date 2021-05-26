@@ -71,7 +71,7 @@
                 <div class="container clearfix">
                     <div class="row">
                         <div class="col-md-8 offset-md-2 center">
-                            <span style="font-size: 56px;"
+                            <span id="welcome-text"
                                 class="color font-secondary nott text-title-light text-dark mb-5 ls1 text-uppercase">
                                 Welcome to HomeBakers.sg!</span>
                             <p style="font-size: 17px; color: #777"></p>
