@@ -387,13 +387,13 @@
 
     #footer {
         padding: 20px 0 22px;
-        background-color: #F2EADE;
+        background-color: {{ $footer_background_theme_color }};
         border-top:0;
     }
 
     #footer,
     .copyright-links a {
-        color: #B45625;
+        color: {{ $footer_background_text_color }};
     }
 
     .copyright-links a:hover {
