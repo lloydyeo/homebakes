@@ -83,6 +83,5 @@
                 </div>
             </div>
         </div>
-        <div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch-header.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;"></div>
     </section>
 @endsection

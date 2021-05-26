@@ -71,16 +71,16 @@
                 <div class="container clearfix">
                     <div class="row">
                         <div class="col-md-8 offset-md-2 center">
-                            <h2 style="font-size: 56px;"
+                            <span style="font-size: 56px;"
                                 class="color font-secondary nott text-title-light text-dark mb-5 ls1 text-uppercase">
-                                Welcome to HomeBakers.sg!</h2>
+                                Welcome to HomeBakers.sg!</span>
                             <p style="font-size: 17px; color: #777"></p>
                         </div>
                     </div>
 
                     <div class="heading-block center border-bottom-0">
-                        <span class="font-primary ls1" style="font-size: 14px; color: #AAA">Our Latest News</span>
-                        <h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.2;">News Feed</h3>
+                        <span class="font-primary ls1" style="color: #AAA">Our Latest News</span>
+                        <h2 class="nott ls0" style="line-height: 1.2;">News Feed</h2>
                     </div>
 
                     <div class="row posts-md col-mb-30 mb-0">
@@ -133,7 +133,7 @@
                 </div>
                 <div class="d-flex justify-content-center mb-4">
                     <a href="{{ route('blog.index') }}"
-                       class="button button-3d button-mini button-rounded button-red">Read All Articles</a>
+                       class="button button-3d button-mini button-rounded">Read All Articles</a>
                 </div>
             </div>
         </div>

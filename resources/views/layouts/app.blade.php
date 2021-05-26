@@ -4,7 +4,7 @@
     <title>@yield('title') | HomeBakers Singapore</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="HomeBakers.sg" />
-    <meta name="description" content="Homebakers Singapore is a platform that features local homebakers." />
+    <meta name="description" content="Home Bakers Singapore is a platform that features local home bakers. " />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="{{ $theme_primary_color }}"/>
     <meta name=”robots” content="index, follow">
@@ -118,29 +118,7 @@
 
     @yield('content')
 
-    <!-- Footer
-    ============================================= -->
-    <footer id="footer" class="dark" style="background-image: url('{{ asset('canvas/demos/restaurant/images/footer-bg.webp') }}'); background: url('{{ asset('canvas/demos/restaurant/images/footer-bg-resize.jpg') }}')  repeat center center / cover; background-size: auto 100%;; padding: 20px 0 22px">
-        <!-- Copyrights
-        ============================================= -->
-        <div id="copyrights" class="bg-transparent pb-4">
-            <div class="container clearfix">
-                <div class="row justify-content-between col-mb-30">
-                    <div class="col-12 col-md-auto text-center text-md-left">
-                        <span class="font-primary">&copy; HomeBakers 2021. All Rights Reserved.</span>
-                    </div>
-                    <div class="col-12 col-md-auto text-center text-md-right">
-                        <div class="copyrights-menu copyright-links clearfix">
-                            <a href="/">Home</a>/
-                            <a href="{{ route('about-us') }}">About Us</a>/
-                            <a href="{{ route('blog.index') }}">Blog</a>/
-                            <a href="#joinus" id="footer-typeform-button">Join Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- #copyrights end -->
-    </footer><!-- #footer end -->
+    @include('layouts.footer')
 </div><!-- #wrapper end -->
 
 <!-- Go To Top
@@ -392,7 +370,22 @@
     }
 
     .page-item.active .page-link, .page-link:focus, .page-link:hover {
-        border-color: #C02A42!important;
+        border-color: {{ $theme_primary_color }}!important;
+    }
+
+    #footer {
+        padding: 20px 0 22px;
+        background-color: #F2EADE;
+        border-top:0;
+    }
+
+    #footer,
+    .copyright-links a {
+        color: #3C271D;
+    }
+
+    .copyright-links a:hover {
+        color:{{ $theme_primary_color }};
     }
 </style>
 

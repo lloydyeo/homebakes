@@ -45,5 +45,4 @@ mix.styles([
     'public/canvas/css/swiper.css',
     'public/canvas/one-page/css/et-line.css',
     'public/canvas/demos/restaurant/restaurant.css',
-    'public/canvas/demos/restaurant/css/fonts.css'
 ], 'public/canvas/css/app.css');
