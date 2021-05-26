@@ -64,7 +64,7 @@
     ============================================= -->
     <section id="content">
 
-        <div style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
+        <div id="slider-divider"  style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
 
         <div style="overflow: visible;">
             <div id="news-section" style="background: #FFF; background-size: 100% auto; padding-top: 50px">
