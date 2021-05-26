@@ -7,8 +7,8 @@
              style="background-image: url('{{ asset('canvas/demos/restaurant/images/sections/6.jpg') }}'); background-size: 100% auto;"
              data-center="background-position:100% 100px;" data-top-bottom="background-position:100% -200px;">
         <div class="container clearfix">
-            <span class="font-primary ls1 mb-2 color" style="font-size: 14px;">The latest on home bakers!</span>
-            <h1 class="font-secondary text-capitalize ls0" style="font-size: 62px;">Our Latest News</h1>
+            <span class="font-primary ls1 mb-2 color">The latest on home bakers!</span>
+            <h1 class="text-capitalize ls0">Our Latest News</h1>
         </div>
 
     </section><!-- #page-title end -->

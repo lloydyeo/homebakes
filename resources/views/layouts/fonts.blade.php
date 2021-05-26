@@ -1,3 +1,5 @@
+@php $theme_body_font = isset($theme_body_font) ? $theme_body_font : 'Poppins' @endphp
+@php $theme_title_font = isset($theme_title_font) ? $theme_title_font : 'Playfair Display' @endphp
 <style>
     body,
     small,
@@ -17,9 +19,7 @@
     .team-title span,
     .before-heading,
     .wedding-head .first-name span,
-    .wedding-head .last-name span { font-family: 'Open Sans', sans-serif !important; }
-
-
+    .wedding-head .last-name span { font-family: '{{ $theme_body_font }}', sans-serif !important; }
     h1,
     h2,
     h3,
@@ -40,11 +40,10 @@
     .widget-filter-links li a,
     .nav-tree li a,
     .wedding-head,
-    .font-primary { font-family: 'Poppins', sans-serif !important; }
-
+    .font-primary { font-family: '{{ $theme_body_font }}', sans-serif !important; }
 
     .font-secondary {
-        font-family: 'Cookie', cursive !important;
-        font-weight: 400 !important;
+        font-family: '{{ $theme_title_font }}', cursive !important;
+        font-weight: 900!important;
     }
 </style>
