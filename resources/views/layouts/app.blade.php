@@ -381,7 +381,7 @@
 
     #footer,
     .copyright-links a {
-        color: #3C271D;
+        color: #B45625;
     }
 
     .copyright-links a:hover {
