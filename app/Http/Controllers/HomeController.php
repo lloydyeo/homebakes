@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Shop;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,8 @@ class HomeController extends Controller
 
     public function home(Request $request) {
         $articles = Article::where('published', 1)->whereNotNull('cover_image')->get();
-        return view('home', compact('articles'));
+        $shops = Shop::where('published', 1)->whereNotNull('cover_image')->get();
+        return view('home', compact('articles', 'shops'));
     }
 
     public function aboutUs(Request $request) {

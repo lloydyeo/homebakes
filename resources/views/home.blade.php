@@ -137,7 +137,69 @@
                 </div>
             </div>
         </div>
+
+        <div class="section mb-0" style="background:#FFF;">
+            <div class="heading-block center mb-0 border-bottom-0">
+                <span class="font-primary ls1" style="font-size: 14px; color: #AAA">Not sure what to get?</span>
+                <h3 class="nott font-secondary ls0 color" style="font-size: 60px;line-height: 1.3;">Featured Home Bakers</h3>
+            </div>
+        </div>
+
+        <div class="section dessert-menu m-0 p-0">
+            <div class="container-fluid">
+
+                <div class="row align-items-stretch clearfix">
+                    <div class="col-lg-5" style="background-color: #FFF; padding: 0; box-shadow: -4px 1px 15px 3px rgba(0,0,0,0.07);">
+                        <div id="dessert-menu-carousel" class="menu-carousel owl-carousel image-carousel carousel-widget customjs">
+
+                            @foreach ($shops as $shop)
+                                <div class="oc-item">
+                                    <img height="250" width="250" style="object-fit: contain;" class="topmargin-sm" src="{{ Storage::disk('public')->url($shop->cover_image) }}" alt="{{ $shop->name }}">
+                                    <div class="food-content clearfix">
+                                        <div class="d-flex flex-column flex-sm-row justify-content-sm-between mb-4">
+                                            <div class="heading-block border-bottom-0 mb-0">
+                                                <h3 class="font-secondary nott">{{ $shop->name }}</h3>
+{{--                                                <div class="food-info">Chocolate, Caramel, Hazelnut, Coffee, Strawberry</div>--}}
+                                            </div>
+{{--                                            <div class="food-price color font-primary mt-3">&dollar;19.99</div>--}}
+                                        </div>
+                                        @if ($shop->description)
+                                        <p class="mb-0">{!! nl2br($shop->description) !!}</p>
+                                        @endif
+{{--                                        <a style="display:none!important;" href="demos/restaurant/menu.html" class="more-link">See More Details <i class="icon-line-arrow-right"></i></a>--}}
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 clearfix" style="background:#F7F5F0;">
+                        <div class="vertical-middle">
+                            <div class="col-padding clearfix">
+                                <div><div id="item-thumb1" class="item-thumb"></div></div>
+{{--                                <div class="center mx-auto"><a class="button button-border button-small button-black button-dark button-circle ml-0" style="margin-top: 0px;">See All Menu</a></div>--}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         </div>
 
     </section><!-- #content end -->
+@endsection
+
+@section('page-custom-css')
+    <style>
+        @foreach ($shops as $shop)
+            .dessert-menu .item-thumb .owl-dot:nth-of-type({{ $loop->iteration }}) span {
+                background-image: url('{{ Storage::disk('public')->url($shop->cover_image) }}');
+                background-size: 150px 150px;
+                background-repeat: no-repeat;
+                background-color:#fff;
+            }
+        @endforeach
+    </style>
 @endsection
