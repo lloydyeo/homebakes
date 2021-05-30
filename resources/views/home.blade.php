@@ -138,6 +138,7 @@
             </div>
         </div>
 
+        @if (false)
         <div class="section mb-0" style="background:#FFF;">
             <div class="heading-block center mb-0 border-bottom-0">
                 <span class="font-primary ls1" style="font-size: 14px; color: #AAA">Not sure what to get?</span>
@@ -185,7 +186,7 @@
 
             </div>
         </div>
-
+        @endif
         </div>
 
     </section><!-- #content end -->
