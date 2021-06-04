@@ -103,10 +103,10 @@
                             <li class="menu-item"><a class="menu-link" href="/"><div>Home</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('about-us') }}"><div>About</div></a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('blog.index') }}"><div>Blog</div></a></li>
-                            <li class="menu-item"><a class="typeform-share button" id="typeform-button"
-                                                     href="https://form.typeform.com/to/gNgmYJjJ?typeform-medium=embed-snippet"
-                                                     data-mode="drawer_right" rel="noreferrer"
-                                                     style="display:inline-block;text-decoration:none;background-color:{{ $theme_primary_color }};color:white;cursor:pointer;font-family:'Poppins', sans-serif !important;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 22px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Join Us </a></li>
+                            <li class="menu-item"><a class="button" id="typeform-button"
+                                                     href="https://forms.gle/xmdT5rvnoeWQSjug8" rel="noreferrer"
+                                                     style="display:inline-block;text-decoration:none;background-color:{{ $theme_primary_color }};color:white;cursor:pointer;font-family:'Poppins', sans-serif !important;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 22px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;"
+                                                     target="_blank">Join Us </a></li>
 {{--                            <li class="menu-item"><a class="button button-red cta-link menu-link color" href="javascript:void(0);"><div>Join Us</div></a></li>--}}
                         </ul>
                     </nav><!-- #primary-menu end -->
@@ -454,7 +454,6 @@
         document.getElementById('typeform-button').click();
     });
 </script>
-<script>(function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; js.setAttribute('defer','defer'); q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 @yield('page-js')
 </body>
 </html>
