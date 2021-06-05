@@ -28,7 +28,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://homebakers.sg/blog/best-home-bake-cakes-singapore-local</loc>
+  <loc>https://homebakers.sg/blog/Amazing-homebakers</loc>
   <lastmod>2021-05-24T03:19:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -37,6 +37,9 @@
   <lastmod>2021-05-24T03:19:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
+<url>
+    <loc>https://homebakers.sg/blog/support-local-home-bakers</loc>
+    <lastmod>2021-05-24T03:19:53+00:00</lastmod>
+    <priority>0.80</priority>
+</url>
 </urlset>
