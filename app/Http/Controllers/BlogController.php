@@ -8,7 +8,7 @@ use App\Models\Article;
 class BlogController extends Controller
 {
     public function index(Request $request) {
-        $articles = Article::where('published', 1)->whereNotNull('cover_image')->get();
+        $articles = Article::where('published', 1)->whereNotNull('cover_image')->orderBy('created_at', 'desc')->get();
         return view('blog.index', compact('articles'));
     }
 
