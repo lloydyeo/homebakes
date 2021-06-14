@@ -1,7 +1,11 @@
 @extends ('layouts.app')
 
 @section('page-css')
-
+    <style>
+        p.font-weight-bold.color {
+            font-size:30px;
+        }
+    </style>
 @endsection
 
 @section('title', 'About Us')
@@ -38,27 +42,27 @@
 {{--                        <p>As the platform is in its infancy, we would be delighted to start a conversation with homebakers to understand your needs.</p>--}}
 {{--                        <p class="font-weight-bold">We would love to hear from you either at our <a href="mailto:enquiry@homebakers.sg">email</a> or through Instagram DM <a href="https://www.instagram.com/homebakerssingapore/" target="_blank">@HomebakersSingapore</a>.</p>--}}
 
-                        <p class="font-weight-bold">We are a platform that features and promotes local home bakers.</p>
+                        <p class="font-secondary color font-weight-bold">We are a platform that features and promotes local home bakers.</p>
                         <p>Hi, We are Homebakers.sg!</p>
                         <p>We want to showcase outstanding home bakers and share their delectable delights with the masses.</p>
                         <p>Our goal is to establish a centralised platform to connect customers with local home bakers.</p>
                         <br/>
-                        <p class="font-weight-bold">Our mission is to increase the awareness of local home bakeries in Singapore.</p>
+                        <p class="font-secondary color font-weight-bold">Our mission is to increase the awareness of local home bakeries in Singapore.</p>
                         <p>The home baking community is now flourishing with increasing support from people who make a conscious choice to buy local. #SupportLocalSg</p>
                         <p>We champion the cause of supporting local, so that they can continue doing what they love, turning their dreams into reality.</p>
                         <br/>
-                        <p>We care about <span class="font-weight-bold">choices</span>.</p>
+                        <p>We care about <span class="font-secondary color font-weight-bold">choices</span>.</p>
                         <p>We want consumers to know the unique and wide variety of options that home bakeries have to offer, for every occasion.</p>
-                        <p>We care about <span class="font-weight-bold">empowerment</span>.</p>
+                        <p>We care about <span class="font-secondary color font-weight-bold">empowerment</span>.</p>
                         <p>We want to give support to local home bakers, providing them with the momentum to continue doing what they love.</p>
-                        <p>We care about <span class="font-weight-bold">community</span>.</p>
+                        <p>We care about <span class="font-secondary color font-weight-bold">community</span>.</p>
                         <p>We want to build a growing and tight knitted ecosystem of #supportlocal individuals based on respect and trust.</p>
-                        <p>We care about <span class="font-weight-bold">sustainable growth</span>.</p>
+                        <p>We care about <span class="font-secondary color font-weight-bold">sustainable growth</span>.</p>
                         <p>We want to optimize growth with ecological and social footprints in mind. We advocate the same for our partners.</p>
-                        <p>We care about <span class="font-weight-bold">innovation</span>.</p>
+                        <p>We care about <span class="font-secondary color font-weight-bold">innovation</span>.</p>
                         <p>We are constantly forward looking in the way we do things, to stay relevant by redefining existing norms.</p>
                         <br/>
-                        <p class="font-weight-bold">Join us and be a partner home baker</p>
+                        <p class="font-secondary color font-weight-bold">Join us and be a partner home baker</p>
                         <p>As the platform is in its infancy, we would be delighted to start a conversation with home bakers to understand your needs.</p>
                         <p>We would love to hear from you either at our <a href="mailto:admin@homebakers.sg">email</a> or through Instagram DM <a href="https://www.instagram.com/homebakerssingapore/" target="_blank">@HomebakersSingapore</a></p>
                         <a class="button" id="typeform-button"
