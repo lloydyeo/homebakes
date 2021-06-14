@@ -31,7 +31,7 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-4 col-sm-12">
-                        <img src="{{ asset('images/about-us/banner.jpg') }}" alt="About Us" />
+                        <img src="{{ asset('images/about-us/banner.jpeg') }}" alt="About Us" />
                     </div>
 
                     <div id="about-us-text" class="col-lg-8 col-sm-12">
