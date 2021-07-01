@@ -27,6 +27,8 @@ Route::get('/blog/{article:slug}', [BlogController::class, 'showArticle'])->name
 Route::get('/bakers', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/baker/{shop:slug}', [ShopController::class, 'showShop'])->name('shop.showShop');
 
+Route::get('/products/{product:id}', [ShopController::class, 'showProduct'])->name('shop.showProduct');
+
 
 //Route::domain('admin.homebakers.sg')->group(function () {
 //    Route::get('/', [DashboardController::class, 'index']);

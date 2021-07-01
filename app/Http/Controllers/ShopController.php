@@ -16,4 +16,11 @@ class ShopController extends Controller
         $product_images = ProductImage::where('shop_id', $shop->id)->orderBy('sort_order', 'asc')->get();
         return view('shop.merchant-inner', compact('shop', 'product_images'));
     }
+
+    public function showProduct(Request $request, ProductImage $product) {
+        $shop = Shop::where('id', $product->shop_id)->get();
+        $additional_product_images = ProductImage::where('shop_id', $shop->id)->where('id', '!=', $product->id)->get();
+
+        return view('shop.product-inner', compact('shop', 'additional_product_images', 'product'));
+    }
 }
