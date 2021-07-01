@@ -114,7 +114,7 @@
                             <a href="{{ Storage::disk('s3')->url($product_image->image) }}" data-lightbox="gallery-item" class="grid-item">
                                 <img style="object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
                             </a>
-                            <h4 class="text-center color my-3">{{ $product_image->product_name }}</h4>
+                            <h4 class="text-center color my-3">{{ $product_image->product_name ?  : '' }}</h4>
                         </div>
                     @endforeach
                 </div>
