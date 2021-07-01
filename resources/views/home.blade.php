@@ -334,6 +334,8 @@
             object-fit: contain;
             object-position: center;
             box-shadow: 1px 1px 10px #d5d5d5;
+            background-color:white;
+            padding:30px;
         }
     </style>
 @endsection
