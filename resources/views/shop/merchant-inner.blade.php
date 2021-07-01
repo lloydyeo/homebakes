@@ -111,7 +111,7 @@
                 <div class="row">
                     @foreach ($product_images as $product_image)
                         <div class="col-lg-4">
-                            <a href="{{ Storage::disk('s3')->url($product_image->image) }}" data-lightbox="gallery-item" class="grid-item">
+                            <a href="{{ route('shop.showProduct', ['product' => $product_image->id]) }}" data-lightbox="gallery-item" class="grid-item">
                                 <img style="object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
                             </a>
                             <h4 class="text-center color my-3">{{ $product_image->product_name ? $product_image->product_name  : '' }}</h4>
