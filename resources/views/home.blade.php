@@ -331,6 +331,7 @@
         }
         .shop-cover-image {
             max-height:250px;
+            width: 90%;
             object-fit: contain;
             object-position: center;
             box-shadow: 1px 1px 10px #d5d5d5;
