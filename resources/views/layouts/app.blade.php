@@ -439,7 +439,12 @@
             display:none!important;
         }
         #header.sticky-header #header-wrap,
-        #header.transparent-header, #header.transparent-header:not(.sticky-header) #header-wrap {
+        #header.transparent-header,
+        #header.transparent-header:not(.sticky-header) #header-wrap {
+            background-color:white!important;
+        }
+
+        #header.sticky-header.sticky-header-shrink #header-wrap {
             background-color:white!important;
             box-shadow: 1px 1px 10px #E5E5E5;
         }

@@ -22,8 +22,9 @@
 @section('title', 'Home')
 
 @section('content')
+    @php $hero_title = $homepage->where('field', 'hero_title')->first(); $hero_title = $hero_title ? $hero_title->value : ''; @endphp
+    @php $hero_description = $homepage->where('field', 'hero_description')->first(); $hero_description = $hero_description ? $hero_description->value : ''; @endphp
 
-    @if(false)
     <!-- Slider
     ============================================= -->
     <section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100 include-header" data-effect="fade"
@@ -35,21 +36,9 @@
                         <div class="container dark">
                             <div class="slider-caption">
                                 <div>
-                                    <h2 class="font-secondary ls0 nott" data-animate="fadeIn">Freshly
-                                        Baked Treats</h2>
+                                    <h2 class="font-secondary ls0 nott" data-animate="fadeIn">{{ $hero_title }}</h2>
                                     <p class="d-none d-sm-block d-lg-block font-primary" data-animate="fadeIn"
-                                       data-delay="400">Discover from our list of home bakers to satisfy your cravings
-                                        now!</p>
-                                    {{--                                    <div class="input-group form-group mt-5" style="box-shadow:0 0 30px 4px rgb(0 0 0 / 80%);" data-animate="fadeIn" data-delay="800">--}}
-                                    {{--                                        <input id="search-all" class="pl-3 form-control-pill text-white font-weight-bold--}}
-                                    {{--                                            form-control form-control-plaintext border-0"--}}
-                                    {{--                                               type="text" name="search" value="" placeholder="Search by name or location..." />--}}
-                                    {{--                                        <div class="input-group-append" style="height:fit-content;">--}}
-                                    {{--                                                <span class="input-group-text bg-color text-white">--}}
-                                    {{--                                                    <i class="icon-line-search"></i>--}}
-                                    {{--                                                </span>--}}
-                                    {{--                                        </div>--}}
-                                    {{--                                    </div>--}}
+                                       data-delay="400">{{ $hero_description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -62,15 +51,13 @@
             </div>
         </div>
     </section>
-    @endif
     <!-- Content
     ============================================= -->
     <section id="content">
 
+        @if(false)
         <div class="hero-section section mb-0 mt-0" style="background:#FFF;">
             <div class="container clearfix d-flex">
-                @php $hero_title = $homepage->where('field', 'hero_title')->first(); $hero_title = $hero_title ? $hero_title->value : ''; @endphp
-                @php $hero_description = $homepage->where('field', 'hero_description')->first(); $hero_description = $hero_description ? $hero_description->value : ''; @endphp
                 <div style="flex:1;">
                     <h2 class="color font-secondary nott text-uppercase ls-1">{{ $hero_title }}</h2>
                     <div>
@@ -85,19 +72,41 @@
                 </div>
             </div>
         </div>
+        @endif
 
         <div class="featured-bakers-section section mb-0 mt-0">
-            <h2 class="color text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
+            <div class="container clearfix">
+                <h2 class="color text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
+                <div class="row">
+                    <div id="oc-testi" class="owl-carousel carousel-widget"
+                         data-pagi="false" data-loop="true"
+                         data-margin="20" data-items-lg="3"
+                         data-items-xl="3" data-items-md="2" data-items-sm="1" data-items-xs="1">
+                        @foreach($shops as $shop)
+                            <div class="text-center oc-item m-2">
+                                <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
+                                    <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                                </a>
+                                <h4 class="color my-3">{{ $shop->name }}</h4>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+
+            @if(false)
             <div class="row justify-content-center col-mb-50 d-flex">
                 @foreach($shops as $shop)
                     <div class="col-lg-4 text-center">
                         <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
-                            <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                            <img class="rounded-3 shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
                         </a>
                         <h3 class="color my-3">{{ $shop->name }}</h3>
                     </div>
                 @endforeach
             </div>
+            @endif
         </div>
 
         <div class="why-buy-from-us-section section mb-0 mt-0" style="background-color:#fff;">
@@ -336,9 +345,20 @@
             width: 90%;
             object-fit: contain;
             object-position: center;
-            box-shadow: 1px 1px 10px #d5d5d5;
+            box-shadow: 3px 3px 10px #d5d5d5;
             background-color:white;
             padding:30px;
+        }
+        .shop-cover-image:hover {
+        }
+
+        .shop-cover-image.rounded {
+            border-radius:1em!important;
+        }
+
+        .slider-arrow-left,
+        .slider-arrow-right {
+            display:none!important;
         }
     </style>
 @endsection
