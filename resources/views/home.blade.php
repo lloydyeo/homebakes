@@ -86,8 +86,16 @@
             </div>
         </div>
 
-        <div class="featured-bakers-section section mb-0 mt-0" style="background-color:#91303F;">
-            <h2 class="text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
+        <div class="featured-bakers-section section mb-0 mt-0">
+            <h2 class="color text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
+            <div class="row justify-content-center col-mb-50 d-flex">
+                @foreach($shops as $shop)
+                    <div class="col-lg-4 text-center">
+                        <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                        <h3 class="color my-3">{{ $shop->name }}</h3>
+                    </div>
+                @endforeach
+            </div>
         </div>
 
         <div class="why-buy-from-us-section section mb-0 mt-0" style="background-color:#fff;">
@@ -320,6 +328,12 @@
             max-height:300px!important;
             object-fit: cover;
             object-position: center;
+        }
+        .shop-cover-image {
+            max-height:250px;
+            object-fit: contain;
+            object-position: center;
+            box-shadow: 1px 1px 10px #d5d5d5;
         }
     </style>
 @endsection
