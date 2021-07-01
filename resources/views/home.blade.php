@@ -91,7 +91,9 @@
             <div class="row justify-content-center col-mb-50 d-flex">
                 @foreach($shops as $shop)
                     <div class="col-lg-4 text-center">
-                        <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                        <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
+                            <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                        </a>
                         <h3 class="color my-3">{{ $shop->name }}</h3>
                     </div>
                 @endforeach
