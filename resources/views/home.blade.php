@@ -22,6 +22,8 @@
 @section('title', 'Home')
 
 @section('content')
+
+    @if(false)
     <!-- Slider
     ============================================= -->
     <section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100 include-header" data-effect="fade"
@@ -60,12 +62,115 @@
             </div>
         </div>
     </section>
+    @endif
     <!-- Content
     ============================================= -->
     <section id="content">
 
-        <div id="slider-divider"  style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
+        <div class="hero-section section mb-0 mt-0" style="background:#FFF;">
+            <div class="container clearfix d-flex">
+                @php $hero_title = $homepage->where('field', 'hero_title')->first(); $hero_title = $hero_title ? $hero_title->value : ''; @endphp
+                @php $hero_description = $homepage->where('field', 'hero_description')->first(); $hero_description = $hero_description ? $hero_description->value : ''; @endphp
+                <div style="flex:1;">
+                    <h2 class="color font-secondary nott text-uppercase ls-1">{{ $hero_title }}</h2>
+                    <div>
+                        {!! $hero_description !!}
+                    </div>
+                    <a class="button">
+                        Shop Now
+                    </a>
+                </div>
+                <div class="ml-6" style="flex:1;">
+                    <h2 class="color font-secondary nott text-center text-uppercase ls-1">Home Baked Collection</h2>
+                </div>
+            </div>
+        </div>
 
+        <div class="featured-bakers-section section mb-0 mt-0" style="background-color:#91303F;">
+            <h2 class="text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
+        </div>
+
+        <div class="why-buy-from-us-section section mb-0 mt-0" style="background-color:#fff;">
+            <div class="container clearfix">
+                <h2 class="text-uppercase ls-1 text-center text-black">
+                    Why buy from us?
+                </h2>
+                <div class="row">
+                    @for($i=0;$i<3;$i++)
+                        <div class="col-md-4">
+                            <div class="feature-box fbox-center fbox-plain px-4 py-5 rounded-lg bg-white mx-0">
+                                <div class="fbox-icon mb-2">
+                                    <a href="javascript:void(0);">
+                                        <img src="{{ isset($homepage) && $homepage->where('field', 'why_buy_from_us_image_' . $i)->first() ? Storage::disk('s3')->url($homepage->where('field', 'why_buy_from_us_image_' . $i)->first()->value) : 'https://via.placeholder.com/150' }}"
+                                             alt="{{ isset($homepage) && $homepage->where('field', 'why_buy_from_us_title_' . $i)->first() ? $homepage->where('field', 'why_buy_from_us_title_' . $i)->first()->value : 'Home Bakers' }}" />
+{{--                                        <i class="icon-line-layers"></i>--}}
+                                    </a>
+                                </div>
+                                <div class="fbox-content">
+                                    <h3>{{ isset($homepage) && $homepage->where('field', 'why_buy_from_us_title_' . $i)->first() ? $homepage->where('field', 'why_buy_from_us_title_' . $i)->first()->value : 'Home Bakers' }}</h3>
+                                    <p class="my-3">
+                                        {{ isset($homepage) && $homepage->where('field', 'why_buy_from_us_description_' . $i)->first() ? $homepage->where('field', 'why_buy_from_us_description_' . $i)->first()->value : 'Home Bakers' }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endfor
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="counter-section section mb-0 mt-0">
+            <div class="container clearfix">
+                <div class="row justify-content-between col-mb-50">
+                    <div class="col-6 col-lg-4 text-center">
+                        <div class="counter color font-primary ls1"><span data-from="0"
+                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_homebakers')->first() ? $homepage->where('field', 'num_homebakers')->first()->value : '0' }}"
+                                                                          data-refresh-interval="100"
+                                                                          data-speed="2000"></span></div>
+                        <h5 class="mb-0 text-smaller text-black-50">Home Bakers</h5>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <div class="counter color font-primary ls1"><span data-from="0"
+                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_products')->first() ? $homepage->where('field', 'num_products')->first()->value : '0' }}"
+                                                                          data-refresh-interval="200" data-speed="2500"></span></div>
+                        <h5 class="mb-0 text-smaller text-black-50">Products</h5>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <div class="counter color font-primary ls1"><span data-from="0"
+                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_sales')->first() ? $homepage->where('field', 'num_sales')->first()->value : '0' }}"
+                                                                          data-refresh-interval="2" data-speed="1000"></span></div>
+                        <h5 class="mb-0 text-smaller text-black-50">Sales</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section section my-0 bg-white">
+            <div class="container clearfix d-flex">
+                @php $join_us_img = $homepage->where('field', 'join_us_image')->first() ? Storage::disk('s3')->url($homepage->where('field', 'join_us_image')->first()->value) : 'https://via.placeholder.com/600x300'; @endphp
+                @php $join_us_title = $homepage->where('field', 'join_us_title')->first() ? $homepage->where('field', 'join_us_title')->first()->value : ''; @endphp
+                @php $join_us_description = $homepage->where('field', 'join_us_description')->first() ? $homepage->where('field', 'join_us_description')->first()->value : ''; @endphp
+                <div style="flex:1;" class="d-flex align-items-center join-us-image-container">
+                    <img src="{{ $join_us_img }}" alt="{{ $join_us_title }}" />
+                </div>
+                <div class="ml-6" style="flex:1;">
+                    <h2 class="color nott text-uppercase ls-1">{{ $join_us_title }}</h2>
+                    <div>
+                        {!! $join_us_description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (false)
+        <div id="slider-divider"  style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
+        @endif
+
+        {{--    Blog + Old Dessert Menu    --}}
+        @if(false)
         <div style="overflow: visible;">
             <div id="news-section" style="background: #FFF; background-size: 100% auto; padding-top: 50px">
                 <div class="container clearfix">
@@ -137,15 +242,12 @@
                 </div>
             </div>
         </div>
-
-        @if (false)
         <div class="section mb-0" style="background:#FFF;">
             <div class="heading-block center mb-0 border-bottom-0">
                 <span class="font-primary ls1" style="font-size: 14px; color: #AAA">Not sure what to get?</span>
                 <h3 class="nott font-secondary ls0 color" style="font-size: 60px;line-height: 1.3;">Featured Home Bakers</h3>
             </div>
         </div>
-
         <div class="section dessert-menu m-0 p-0">
             <div class="container-fluid">
 
@@ -202,5 +304,22 @@
                 background-color:#fff;
             }
         @endforeach
+    </style>
+    <style>
+        .hero-section .button {
+            margin-left: 0;
+            border-radius: 50px;
+            margin-top: 2em;
+        }
+        .fbox-icon {
+            width:50%;
+            height:50%;
+        }
+        .join-us-image-container > img {
+            width:100%!important;
+            max-height:300px!important;
+            object-fit: cover;
+            object-position: center;
+        }
     </style>
 @endsection
