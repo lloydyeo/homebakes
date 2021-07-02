@@ -73,6 +73,9 @@
             <div class="container">
                 <h2 class="text-center color">Related Products</h2>
                 <div class="row text-center">
+                @if (count($additional_product_images) == 2)
+                    <div class="col-lg-2"></div>
+                @endif
                 @foreach($additional_product_images as $product_image)
                     <div class="col-lg-4">
                         <img style="display:block; object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
