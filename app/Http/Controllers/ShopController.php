@@ -18,8 +18,9 @@ class ShopController extends Controller
     }
 
     public function showProduct(Request $request, ProductImage $product) {
-        $shop = Shop::where('id', $product->shop_id)->get();
-        $additional_product_images = ProductImage::where('shop_id', $shop->id)->where('id', '!=', $product->id)->get();
+        $shop = Shop::where('id', $product->shop_id)->first();
+        $additional_product_images = ProductImage::where('shop_id', $shop->id)
+            ->where('id', '!=', $product->id)->get();
 
         return view('shop.product-inner', compact('shop', 'additional_product_images', 'product'));
     }
