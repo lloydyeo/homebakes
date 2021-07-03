@@ -78,7 +78,16 @@
             <div class="container clearfix">
                 <h2 class="color text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
                 <div class="row">
-                    <div id="oc-testi" class="owl-carousel carousel-widget"
+                    @foreach($shops as $shop)
+                        <div class="col-lg-4">
+                            <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
+                                <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                            </a>
+{{--                            <h4 class="color my-3">{{ $shop->name }}</h4>--}}
+                        </div>
+                    @endforeach
+
+                    @if(false) <div id="oc-testi" class="owl-carousel carousel-widget"
                          data-pagi="false" data-loop="true"
                          data-margin="20" data-items-lg="3"
                          data-items-xl="3" data-items-md="2" data-items-sm="1" data-items-xs="1">
@@ -90,7 +99,7 @@
                                 <h4 class="color my-3">{{ $shop->name }}</h4>
                             </div>
                         @endforeach
-                    </div>
+                    </div> @endif
                 </div>
             </div>
 

@@ -20,6 +20,7 @@ use App\Http\Controllers\ShopController;
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/home', [HomeController::class, 'home']);
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
+Route::get('/merchants/onboarding', [HomeController::class, 'onboarding'])->name('onboarding');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{article:slug}', [BlogController::class, 'showArticle'])->name('blog.show-article');
