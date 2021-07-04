@@ -152,7 +152,7 @@
         </div>
 
 
-        @if ($homepage->where('field', 'num_sales')->first())
+        @if ($homepage->where('field', 'num_sales')->first()->value)
         <div class="counter-section section mb-0 mt-0 bg-white">
             <div class="container clearfix">
                 <div class="row justify-content-between col-mb-50">
