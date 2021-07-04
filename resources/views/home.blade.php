@@ -76,7 +76,7 @@
 
         <div class="featured-bakers-section section mb-0 mt-0 bg-white">
             <div class="container clearfix">
-                <h2 class="color text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
+                <h2 class="color text-uppercase ls-1 text-center text-white">{{ $homepage->where('field', 'section_hero_title')->first()->value }}</h2>
                 <div class="d-flex flex-wrap mx-auto align-items-center justify-content-center">
 
                     <div id="oc-testi" class="owl-carousel carousel-widget"
@@ -95,15 +95,6 @@
                             </div>
                         @endforeach
                     </div>
-
-{{--                    @foreach($shops as $shop)--}}
-{{--                        <div class="featured-baker-logo-container text-center">--}}
-{{--                            <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">--}}
-{{--                                <img class="rounded" style="max-height:150px;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />--}}
-{{--                            </a>--}}
-{{--                                                        <h4 class="color my-3">{{ $shop->name }}</h4>--}}
-{{--                        </div>--}}
-{{--                    @endforeach--}}
                 </div>
             </div>
 
@@ -125,7 +116,7 @@
         <div class="why-buy-from-us-section section mb-0 mt-0" style="background-color:#F7F5F0;" >
             <div class="container clearfix">
                 <h2 class="text-uppercase ls-1 text-center text-black">
-                    Why buy from us?
+                    {{ $homepage->where('field', 'section_wbfu_title')->first()->value }}
                 </h2>
                 <div class="row">
                     @for($i=0;$i<3;$i++)
@@ -150,7 +141,6 @@
                 </div>
             </div>
         </div>
-
 
         @if ($homepage->where('field', 'num_sales')->first()->value)
         <div class="counter-section section mb-0 mt-0 bg-white">
