@@ -77,15 +77,75 @@
         <div class="featured-bakers-section section mb-0 mt-0">
             <div class="container clearfix">
                 <h2 class="color text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
-                <div class="row">
+                <div class="d-flex flex-wrap mx-auto align-items-center justify-content-center">
                     @foreach($shops as $shop)
-                        <div class="col-lg-4">
+                        <div class="featured-baker-logo-container text-center">
                             <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
-                                <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                                <img class="rounded" style="max-height:150px;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
                             </a>
-{{--                            <h4 class="color my-3">{{ $shop->name }}</h4>--}}
+                            {{--                            <h4 class="color my-3">{{ $shop->name }}</h4>--}}
                         </div>
                     @endforeach
+                </div>
+                <style>
+                    @media(min-width:320px) {
+                        .featured-baker-logo-container {
+                            width:50%;
+                            margin-bottom: 1rem;
+                        }
+
+                        .featured-baker-logo-container img {
+                            padding-left:1rem;
+                            padding-right:1rem;
+                        }
+                    }
+
+                    @media(min-width:768px) {
+                        .featured-baker-logo-container {
+                            width:33%;
+                            margin-bottom: 2rem;
+                        }
+                        .featured-baker-logo-container img {
+                            padding-left:1rem;
+                            padding-right:1rem;
+                        }
+                    }
+
+                    /*@media(min-width:992px) {*/
+                    /*    .featured-baker-logo-container {*/
+                    /*        width:33%;*/
+                    /*        margin-bottom: 5rem;*/
+                    /*    }*/
+                    /*}*/
+
+                    @media(min-width:1024px) {
+                        .featured-baker-logo-container {
+                            width:20%;
+                            margin-bottom: 4rem;
+                        }
+                        .featured-baker-logo-container img {
+                            padding-left:1rem;
+                            padding-right:1rem;
+                        }
+                    }
+
+                    @media(min-width:1440px) {
+                        .featured-baker-logo-container {
+                            width:20%;
+                            margin-bottom: 5rem;
+                        }
+                        .featured-baker-logo-container img {
+                            padding-left:0;
+                            padding-right:0;
+                        }
+                    }
+
+                    /*.featured-baker-logo-container {*/
+
+                    /*}*/
+                </style>
+
+                <div class="row">
 
                     @if(false) <div id="oc-testi" class="owl-carousel carousel-widget"
                          data-pagi="false" data-loop="true"

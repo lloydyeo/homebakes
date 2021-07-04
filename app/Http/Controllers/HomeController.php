@@ -36,4 +36,8 @@ class HomeController extends Controller
     public function aboutUs(Request $request) {
         return view('about-us');
     }
+
+    public function onboarding(Request $request) {
+        return view('onboarding');
+    }
 }
