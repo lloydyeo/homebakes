@@ -449,6 +449,9 @@
             box-shadow: 1px 1px 10px #E5E5E5;
         }
     }
+    .text-black {
+        color:#000;
+    }
 </style>
 <style>
     @if ($global_custom_css)

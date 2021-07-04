@@ -112,9 +112,11 @@
                     @foreach ($product_images as $product_image)
                         <div class="col-lg-4">
                             <a href="{{ route('shop.showProduct', ['product' => $product_image->id]) }}" data-lightbox="gallery-item" class="grid-item">
-                                <img style="object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
+                                <img class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
                             </a>
                             <h4 class="text-center color my-3">{{ $product_image->product_name ? $product_image->product_name  : '' }}</h4>
+                            <h4 class="text-center color mb-3 ">${{ number_format($product_image->product_price, 2) }}</h4>
+                            <div class="text-center">{!! nl2br($product_image->product_description) !!}</div>
                         </div>
                     @endforeach
                 </div>
@@ -145,6 +147,11 @@
         }
         .section h2 {
             color:black;
+        }
+        .grid-item > img, .grid-item .grid-inner > img {
+            height:410px;
+            object-fit: cover;
+            object-position: center;
         }
     </style>
 @endsection

@@ -74,92 +74,36 @@
         </div>
         @endif
 
-        <div class="featured-bakers-section section mb-0 mt-0">
+        <div class="featured-bakers-section section mb-0 mt-0 bg-white">
             <div class="container clearfix">
                 <h2 class="color text-uppercase ls-1 text-center text-white">Our Featured Bakers</h2>
                 <div class="d-flex flex-wrap mx-auto align-items-center justify-content-center">
-                    @foreach($shops as $shop)
-                        <div class="featured-baker-logo-container text-center">
-                            <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
-                                <img class="rounded" style="max-height:150px;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
-                            </a>
-                            {{--                            <h4 class="color my-3">{{ $shop->name }}</h4>--}}
-                        </div>
-                    @endforeach
-                </div>
-                <style>
-                    @media(min-width:320px) {
-                        .featured-baker-logo-container {
-                            width:50%;
-                            margin-bottom: 1rem;
-                        }
 
-                        .featured-baker-logo-container img {
-                            padding-left:1rem;
-                            padding-right:1rem;
-                        }
-                    }
-
-                    @media(min-width:768px) {
-                        .featured-baker-logo-container {
-                            width:33%;
-                            margin-bottom: 2rem;
-                        }
-                        .featured-baker-logo-container img {
-                            padding-left:1rem;
-                            padding-right:1rem;
-                        }
-                    }
-
-                    /*@media(min-width:992px) {*/
-                    /*    .featured-baker-logo-container {*/
-                    /*        width:33%;*/
-                    /*        margin-bottom: 5rem;*/
-                    /*    }*/
-                    /*}*/
-
-                    @media(min-width:1024px) {
-                        .featured-baker-logo-container {
-                            width:20%;
-                            margin-bottom: 4rem;
-                        }
-                        .featured-baker-logo-container img {
-                            padding-left:1rem;
-                            padding-right:1rem;
-                        }
-                    }
-
-                    @media(min-width:1440px) {
-                        .featured-baker-logo-container {
-                            width:20%;
-                            margin-bottom: 5rem;
-                        }
-                        .featured-baker-logo-container img {
-                            padding-left:0;
-                            padding-right:0;
-                        }
-                    }
-
-                    /*.featured-baker-logo-container {*/
-
-                    /*}*/
-                </style>
-
-                <div class="row">
-
-                    @if(false) <div id="oc-testi" class="owl-carousel carousel-widget"
-                         data-pagi="false" data-loop="true"
-                         data-margin="20" data-items-lg="3"
-                         data-items-xl="3" data-items-md="2" data-items-sm="1" data-items-xs="1">
-                        @foreach($shops as $shop)
-                            <div class="text-center oc-item m-2">
-                                <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
-                                    <img class="rounded shop-cover-image" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
-                                </a>
-                                <h4 class="color my-3">{{ $shop->name }}</h4>
+                    <div id="oc-testi" class="owl-carousel carousel-widget"
+                         data-pagi="false" data-loop="false"
+                         data-margin="20" data-items-lg="5"
+                         data-items-xl="5" data-items-md="2" data-items-sm="1" data-items-xs="2">
+                        @foreach($shops->chunk(3)->all() as $shop_chunks)
+                            <div class="text-center oc-item m-2 d-flex flex-column">
+                            @foreach($shop_chunks as $shop)
+                                <div style="height:250px;" class="d-flex align-items-center">
+                                    <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
+                                        <img class="rounded mx-auto" style="width:80%; height:auto;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                                    </a>
+                                </div>
+                            @endforeach
                             </div>
                         @endforeach
-                    </div> @endif
+                    </div>
+
+{{--                    @foreach($shops as $shop)--}}
+{{--                        <div class="featured-baker-logo-container text-center">--}}
+{{--                            <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">--}}
+{{--                                <img class="rounded" style="max-height:150px;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />--}}
+{{--                            </a>--}}
+{{--                                                        <h4 class="color my-3">{{ $shop->name }}</h4>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
                 </div>
             </div>
 
@@ -178,7 +122,7 @@
             @endif
         </div>
 
-        <div class="why-buy-from-us-section section mb-0 mt-0" style="background-color:#fff;">
+        <div class="why-buy-from-us-section section mb-0 mt-0" style="background-color:#F7F5F0;" >
             <div class="container clearfix">
                 <h2 class="text-uppercase ls-1 text-center text-black">
                     Why buy from us?
@@ -186,7 +130,7 @@
                 <div class="row">
                     @for($i=0;$i<3;$i++)
                         <div class="col-md-4">
-                            <div class="feature-box fbox-center fbox-plain px-4 py-5 rounded-lg bg-white mx-0">
+                            <div class="feature-box fbox-center fbox-plain px-4 py-5 rounded-lg mx-0">
                                 <div class="fbox-icon mb-2">
                                     <a href="javascript:void(0);">
                                         <img src="{{ isset($homepage) && $homepage->where('field', 'why_buy_from_us_image_' . $i)->first() ? Storage::disk('s3')->url($homepage->where('field', 'why_buy_from_us_image_' . $i)->first()->value) : 'https://via.placeholder.com/150' }}"
@@ -203,14 +147,13 @@
                             </div>
                         </div>
                     @endfor
-
                 </div>
             </div>
-
-
         </div>
 
-        <div class="counter-section section mb-0 mt-0">
+
+        @if ($homepage->where('field', 'num_sales')->first())
+        <div class="counter-section section mb-0 mt-0 bg-white">
             <div class="container clearfix">
                 <div class="row justify-content-between col-mb-50">
                     <div class="col-6 col-lg-4 text-center">
@@ -235,26 +178,51 @@
                 </div>
             </div>
         </div>
+        @else
+        <div class="counter-section section mb-0 mt-0 bg-white">
+            <div class="container clearfix">
+                <div class="row justify-content-between col-mb-50">
+                    <div class="col-6 col-lg-4 text-center">
+                        <div class="counter color font-primary ls1"><span data-from="0"
+                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_homebakers')->first() ? $homepage->where('field', 'num_homebakers')->first()->value : '0' }}"
+                                                                          data-refresh-interval="100"
+                                                                          data-speed="2000"></span></div>
+                        <h5 class="mb-0 text-smaller text-black-50">Home Bakers</h5>
+                    </div>
+                    <div class="col-6 col-lg-4 text-center">
+                        <div class="counter color font-primary ls1"><span data-from="0"
+                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_products')->first() ? $homepage->where('field', 'num_products')->first()->value : '0' }}"
+                                                                          data-refresh-interval="200" data-speed="2500"></span></div>
+                        <h5 class="mb-0 text-smaller text-black-50">Products</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
 
-        <div class="cta-section section my-0 bg-white">
-            <div class="container clearfix d-flex">
+        <div class="cta-section section my-0" style="background-color:#F7F5F0;">
+            <div class="container clearfix d-flex flex-sm-column flex-lg-row flex-md-row">
                 @php $join_us_img = $homepage->where('field', 'join_us_image')->first() ? Storage::disk('s3')->url($homepage->where('field', 'join_us_image')->first()->value) : 'https://via.placeholder.com/600x300'; @endphp
                 @php $join_us_title = $homepage->where('field', 'join_us_title')->first() ? $homepage->where('field', 'join_us_title')->first()->value : ''; @endphp
                 @php $join_us_description = $homepage->where('field', 'join_us_description')->first() ? $homepage->where('field', 'join_us_description')->first()->value : ''; @endphp
                 <div style="flex:1;" class="d-flex align-items-center join-us-image-container">
                     <img src="{{ $join_us_img }}" alt="{{ $join_us_title }}" />
                 </div>
-                <div class="ml-6" style="flex:1;">
-                    <h2 class="color nott text-uppercase ls-1">{{ $join_us_title }}</h2>
+                <div class="ml-6 d-flex flex-column justify-content-between" style="flex:1;">
+                    <h2 class="color nott text-uppercase ls-1 mb-0">{{ $join_us_title }}</h2>
                     <div>
-                        {!! $join_us_description !!}
+                        {!! nl2br($join_us_description) !!}
                     </div>
+                    <a class="button mt-3" id="typeform-button"
+                       href="https://forms.gle/xmdT5rvnoeWQSjug8" rel="noreferrer"
+                       style="width:fit-content; display:inline-block;text-decoration:none;background-color:{{ $theme_primary_color }};color:white;cursor:pointer;font-family:'Poppins', sans-serif !important;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 22px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;"
+                       target="_blank">Join Us </a>
                 </div>
             </div>
         </div>
 
         @if (false)
-        <div id="slider-divider"  style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
+        <div id="slider-divider"  style="position: absolute; top: 0; left: 0; width: fit-content; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
         @endif
 
         {{--    Blog + Old Dessert Menu    --}}
@@ -428,6 +396,52 @@
         .slider-arrow-left,
         .slider-arrow-right {
             display:none!important;
+        }
+    </style>
+    <style>
+        @media(min-width:320px) {
+            .featured-baker-logo-container {
+                width:50%;
+                margin-bottom: 1rem;
+            }
+
+            .featured-baker-logo-container img {
+                padding-left:1rem;
+                padding-right:1rem;
+            }
+        }
+
+        @media(min-width:768px) {
+            .featured-baker-logo-container {
+                width:33%;
+                margin-bottom: 2rem;
+            }
+            .featured-baker-logo-container img {
+                padding-left:1rem;
+                padding-right:1rem;
+            }
+        }
+
+        @media(min-width:1024px) {
+            .featured-baker-logo-container {
+                width:20%;
+                margin-bottom: 4rem;
+            }
+            .featured-baker-logo-container img {
+                padding-left:1rem;
+                padding-right:1rem;
+            }
+        }
+
+        @media(min-width:1440px) {
+            .featured-baker-logo-container {
+                width:20%;
+                margin-bottom: 5rem;
+            }
+            .featured-baker-logo-container img {
+                padding-left:0;
+                padding-right:0;
+            }
         }
     </style>
 @endsection

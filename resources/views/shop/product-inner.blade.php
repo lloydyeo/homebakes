@@ -43,13 +43,13 @@
                 <h2 class="color text-center">{{ $product->product_name }}</h2>
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="{{ Storage::disk('s3')->url($product->image) }}" alt="{{ $shop->name }}" />
+                        <img style="width:100%; height: 410px; object-position: center; object-fit: cover;" src="{{ Storage::disk('s3')->url($product->image) }}" alt="{{ $shop->name }}" />
                     </div>
                     <div class="col-lg-8">
-                        <p style="color:#3C271D;" class="py-4">{!! nl2br($shop->description) !!}</p>
-                        <a class="button">
-                            Shop Now
-                        </a>
+                        <div style="color:#3C271D;" class="py-4">{!! nl2br($product->product_description) !!}</div>
+{{--                        <a class="button">--}}
+{{--                            Shop Now--}}
+{{--                        </a>--}}
                     </div>
                 </div>
             </div>
@@ -59,10 +59,10 @@
             <div class="container">
                 <h2>About {{ $shop->name }}</h2>
                 <div class="row">
-                    <div class="col-lg-5 text-left">
+                    <div class="col-lg-4 text-left">
                         <img style="width:100%; padding:10px; background-color:white;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-8">
                         <p class="py-4">{!! nl2br($shop->description) !!}</p>
                     </div>
                 </div>
@@ -73,39 +73,28 @@
             <div class="container">
                 <h2 class="text-center color">Related Products</h2>
                 <div class="row text-center">
-                @if (count($additional_product_images) == 2)
-                    <div class="col-lg-2"></div>
-                @endif
                 @foreach($additional_product_images as $product_image)
-                    <div class="col-lg-4">
-                        <img style="display:block; object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
-                        <h4 class="text-center color my-3">{{ $product_image->product_name ? $product_image->product_name  : '' }}</h4>
+                    <div class="col-lg-12 row">
+                        <div class="col-lg-4">
+                            <img style="width:100%; height:410px; object-fit:cover; object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
+                        </div>
+                        <div class="col-lg-8">
+                            <h4 class="text-left color my-3">{{ $product_image->product_name ? $product_image->product_name  : '' }}</h4>
+                            <h5 class="text-left color mb-3">${{ number_format($product_image->product_price, 2) }}</h5>
+                            <div class="text-left">
+                                {!! $product_image->product_description !!}
+                            </div>
+                        </div>
                     </div>
+                        @if ($loop->last)
+                        @else
+                            <div class="divider divider-thick"></div>
+                        @endif
                 @endforeach
                 </div>
             </div>
         </div>
 
-        @if(false)
-        <div class="best-seller-section section mb-0 mt-0">
-            <div class="container clearfix">
-                <h2 class="text-uppercase text-center color">Best Sellers</h2>
-                <div class="row text-center">
-                    @if (count($product_images) == 2)
-                        <div class="col-lg-2"></div>
-                    @endif
-                    @foreach ($product_images as $product_image)
-                        <div class="col-lg-4">
-                            <a href="{{ Storage::disk('s3')->url($product_image->image) }}" data-lightbox="gallery-item" class="grid-item">
-                                <img style="object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
-                            </a>
-                            <h4 class="text-center color my-3">{{ $product_image->product_name ? $product_image->product_name  : '' }}</h4>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        @endif
     </section><!-- #content end -->
 
 
