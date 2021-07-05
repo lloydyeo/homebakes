@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide-bg"
-                             style="background-image: url('{{ asset('images/homebaker-splash.jpg') }}'),url('{{ asset('images/homebaker-coming-soon.webp') }}');"></div>
+                             style="background-image: url('{{ Storage::disk('s3')->url($homepage->where('field', 'hero_image')->first()->value) }}');"></div>
                     </div>
                 </div>
                 <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
