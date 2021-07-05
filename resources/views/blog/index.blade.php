@@ -85,3 +85,16 @@
         </div>
     </section>
 @endsection
+
+@section('page-custom-css')
+    <style>
+        #news-section .entry {
+            border-radius:0!important;
+            box-shadow:none!important;
+        }
+
+        #news-section .entry:hover {
+            transform: translate(0px, 0px)!important;
+        }
+    </style>
+@endsection

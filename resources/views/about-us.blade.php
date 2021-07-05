@@ -161,14 +161,5 @@
                 padding-right:2rem!important;
             }
         }
-
-        #news-section .entry {
-            border-radius:0!important;
-            box-shadow:none!important;
-        }
-
-        #news-section .entry:hover {
-            transform: translate(0px, 0px)!important;
-        }
     </style>
 @endsection
