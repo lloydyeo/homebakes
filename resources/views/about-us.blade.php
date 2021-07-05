@@ -163,12 +163,12 @@
         }
 
         #news-section .entry {
-            border-radius:0;
-            box-shadow:none;
+            border-radius:0!important;
+            box-shadow:none!important;
         }
 
         #news-section .entry:hover {
-            transform: translate(0px, 0px);
+            transform: translate(0px, 0px)!important;
         }
     </style>
 @endsection
