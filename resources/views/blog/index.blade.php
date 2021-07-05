@@ -4,11 +4,11 @@
 
 @section('content')
     <section id="page-title" class="page-title-parallax page-title-center border-bottom"
-             style="background-image: url('{{ asset('canvas/demos/restaurant/images/sections/6.jpg') }}'); background-size: 100% auto;"
+             style="background-color:#91303F; background-size: 100% auto;"
              data-center="background-position:100% 100px;" data-top-bottom="background-position:100% -200px;">
         <div class="container clearfix">
-            <span class="ls1 mb-2">The latest on home bakers!</span>
-            <h1 class="font-secondary text-capitalize ls0">Our Latest News</h1>
+{{--            <span class="ls1 mb-2">The latest on home bakers!</span>--}}
+            <h1 class="font-secondary text-capitalize ls0 text-white">Our Latest News</h1>
         </div>
 
     </section><!-- #page-title end -->
