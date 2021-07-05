@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
 use App\Models\Homepage;
+use App\Models\ProductImage;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
 use App\Models\Article;
@@ -31,7 +32,8 @@ class HomeController extends Controller
         $homepage = Homepage::all();
         $articles = Article::where('published', 1)->whereNotNull('cover_image')->orderBy('created_at', 'desc')->get();
         $shops = Shop::where('published', 1)->whereNotNull('cover_image')->get();
-        return view('home', compact('articles', 'shops', 'homepage'));
+        $product_count = ProductImage::where('id', '>', 0)->count();
+        return view('home', compact('articles', 'shops', 'homepage', 'product_count'));
     }
 
     public function aboutUs(Request $request) {

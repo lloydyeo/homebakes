@@ -173,16 +173,27 @@
             <div class="container clearfix">
                 <div class="row justify-content-between col-mb-50">
                     <div class="col-6 col-lg-4 text-center">
+{{--                        <div class="counter color font-primary ls1"><span data-from="0"--}}
+{{--                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_homebakers')->first() ? $homepage->where('field', 'num_homebakers')->first()->value : '0' }}"--}}
+{{--                                                                          data-refresh-interval="100"--}}
+{{--                                                                          data-speed="2000"></span></div>--}}
+
                         <div class="counter color font-primary ls1"><span data-from="0"
-                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_homebakers')->first() ? $homepage->where('field', 'num_homebakers')->first()->value : '0' }}"
+                                                                          data-to="{{ count($shops) }}"
                                                                           data-refresh-interval="100"
                                                                           data-speed="2000"></span></div>
+
                         <h5 class="mb-0 text-smaller text-black-50">Home Bakers</h5>
                     </div>
                     <div class="col-6 col-lg-4 text-center">
+{{--                        <div class="counter color font-primary ls1"><span data-from="0"--}}
+{{--                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_products')->first() ? $homepage->where('field', 'num_products')->first()->value : '0' }}"--}}
+{{--                                                                          data-refresh-interval="200" data-speed="2500"></span></div>--}}
+
                         <div class="counter color font-primary ls1"><span data-from="0"
-                                                                          data-to="{{ isset($homepage) && $homepage->where('field', 'num_products')->first() ? $homepage->where('field', 'num_products')->first()->value : '0' }}"
+                                                                          data-to="{{ $product_count }}"
                                                                           data-refresh-interval="200" data-speed="2500"></span></div>
+
                         <h5 class="mb-0 text-smaller text-black-50">Products</h5>
                     </div>
                 </div>
