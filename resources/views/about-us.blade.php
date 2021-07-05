@@ -162,5 +162,13 @@
             }
         }
 
+        #news-section .entry {
+            border-radius:0;
+            box-shadow:none;
+        }
+
+        #news-section .entry:hover {
+            transform: translate(0px, 0px);
+        }
     </style>
 @endsection
