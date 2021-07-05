@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
 use App\Models\Homepage;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
@@ -34,7 +35,8 @@ class HomeController extends Controller
     }
 
     public function aboutUs(Request $request) {
-        return view('about-us');
+        $aboutUs = AboutUs::whereNotNull('description')->orderBy('id', 'asc')->get();
+        return view('about-us', compact('aboutUs'));
     }
 
     public function onboarding(Request $request) {
