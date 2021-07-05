@@ -40,7 +40,7 @@
 
         <div class="content-wrap">
             <div class="container">
-                <a href="{{ route('shop.showShop', ['shop' =>  $shop->id]) }}"><h2 class="color text-center">{{ $product->product_name }}</h2></a>
+                <h2 class="color text-center">{{ $product->product_name }}</h2>
                 <div class="row">
                     <div class="col-lg-4">
                         <img style="width:100%; height: 410px; object-position: center; object-fit: cover;" src="{{ Storage::disk('s3')->url($product->image) }}" alt="{{ $shop->name }}" />
@@ -57,7 +57,7 @@
 
         <div class="section mb-0 mt-0">
             <div class="container">
-                <h2>About {{ $shop->name }}</h2>
+                <a href="{{ route('shop.showShop', ['shop' =>  $shop->id]) }}"><h2 class="color">About {{ $shop->name }}</h2></a>
                 <div class="row">
                     <div class="col-lg-4 text-left">
                         <img style="width:100%; padding:10px; background-color:white;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
