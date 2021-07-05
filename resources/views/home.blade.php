@@ -398,6 +398,10 @@
         .slider-arrow-right {
             display:none!important;
         }
+
+        .owl-item img:hover {
+            box-shadow: 1px 1px 10px grey;
+        }
     </style>
     <style>
         @media(min-width:320px) {
