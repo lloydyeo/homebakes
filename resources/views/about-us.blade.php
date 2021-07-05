@@ -98,7 +98,7 @@
         @foreach($aboutUs as $about_us_section)
         <div class="section mt-0 mb-0 py-5" @if ($loop->iteration%2 == 1) style="background-color:#fff;" @else style="background-color:#F3EADC;" @endif>
             <div class="container">
-                <div class="d-flex w-75 mx-auto">
+                <div class="about-us-container about-us-{{ $about_us_section->id }} d-flex w-75 mx-auto">
                     @if ($about_us_section->orientation == 0)
                         <div class="px-2 text-center d-flex align-items-center justify-content-center" style="flex:1;">
                             <img style="width:100%; object-fit: cover; object-position: center;" src="{{ Storage::disk('s3')->url($about_us_section->image) }}" alt="About Us" />
@@ -123,4 +123,44 @@
         </div>
         @endforeach
     </section><!-- #content end -->
+@endsection
+
+@section('page-custom-css')
+    <style>
+        @media(min-width:320px) {
+            .pl-5, .px-5 {
+                padding-left: 0!important;
+            }
+            .pr-5, .px-5 {
+                padding-right:0!important;
+            }
+
+            .about-us-container {
+                flex-direction: column;
+            }
+        }
+
+        @media(min-width:1024px) {
+            .pl-5, .px-5 {
+                padding-left: 5rem!important;
+            }
+            .pr-5, .px-5 {
+                padding-right: 5rem!important;
+            }
+            .about-us-container {
+                flex-direction: row;
+            }
+
+            .container .about-us-container.about-us-6 .px-2.text-center {
+                padding-left:5rem!important;
+                padding-right:0!important;
+            }
+
+            .container .about-us-container.about-us-7 .px-5,
+            .container .about-us-container.about-us-6 .px-5 {
+                padding-right:2rem!important;
+            }
+        }
+
+    </style>
 @endsection

@@ -40,7 +40,7 @@
 
         <div class="content-wrap">
             <div class="container">
-                <h2 class="color text-center">{{ $product->product_name }}</h2>
+                <a href="{{ route('shop.showShop', ['shop' =>  $shop->id]) }}"><h2 class="color text-center">{{ $product->product_name }}</h2></a>
                 <div class="row">
                     <div class="col-lg-4">
                         <img style="width:100%; height: 410px; object-position: center; object-fit: cover;" src="{{ Storage::disk('s3')->url($product->image) }}" alt="{{ $shop->name }}" />
