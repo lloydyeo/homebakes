@@ -74,7 +74,7 @@
                 <h2 class="text-center color">Related Products</h2>
                 <div class="row text-center">
                 @foreach($additional_product_images as $product_image)
-                    <div class="col-lg-12 row">
+                    <div class="col-lg-12 row product-image-row">
                         <div class="col-lg-4">
                             <img style="width:100%; height:410px; object-fit:cover; object-position: center;" class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
                         </div>
@@ -119,6 +119,18 @@
         }
         .section h2 {
             color:black;
+        }
+
+        @media(min-width:320px) {
+            .product-image-row {
+                padding-right:0;
+            }
+        }
+
+        @media(min-width:992px) {
+            .product-image-row {
+                padding-right:15px;
+            }
         }
     </style>
 @endsection
