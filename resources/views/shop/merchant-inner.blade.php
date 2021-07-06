@@ -163,7 +163,7 @@
             }
         }
 
-        @media(min-width:320px) {
+        @media(min-width:1024px) {
             .shop-name {
                 text-align:left;
             }
