@@ -116,7 +116,7 @@
                             </a>
                             <h4 class="text-center color my-3">{{ $product_image->product_name ? $product_image->product_name  : '' }}</h4>
                             <h4 class="text-center color mb-3 ">${{ number_format($product_image->product_price, 2) }}</h4>
-                            <div class="text-center">{!! nl2br($product_image->product_description) !!}</div>
+                            <div class="text-center mb-5">{!! nl2br($product_image->product_description) !!}</div>
                         </div>
                     @endforeach
                 </div>
