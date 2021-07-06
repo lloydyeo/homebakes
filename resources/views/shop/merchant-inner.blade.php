@@ -40,7 +40,7 @@
         <div class="content-wrap">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="shop-logo-container col-lg-4">
                         <img src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
                     </div>
                     <div class="col-lg-8">
@@ -83,7 +83,7 @@
                         ============================================= -->
                         <div class="d-flex flex-row align-items-center mb-3">
                             <img height="75" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
-                            <h2 class="font-secondary color pl-2">{{ $shop->name }}</h2>
+                            <h2 class="shop-name font-secondary color pl-2">{{ $shop->name }}</h2>
                         </div>
                         <p style="color:#3C271D;">{!! nl2br($shop->description) !!}</p>
                         <!-- Portfolio Single - Description End -->
@@ -152,6 +152,24 @@
             height:410px;
             object-fit: cover;
             object-position: center;
+        }
+
+        @media(min-width:320px) {
+            .shop-name {
+                text-align:center;
+            }
+            .shop-logo-container {
+                text-align:center;
+            }
+        }
+
+        @media(min-width:320px) {
+            .shop-name {
+                text-align:left;
+            }
+            .shop-logo-container {
+                text-align:left;
+            }
         }
     </style>
 @endsection
