@@ -96,9 +96,10 @@
         @endif
 
         @foreach($aboutUs as $about_us_section)
+        @if ($about_us_section->description)
         <div class="section mt-0 mb-0 py-5" @if ($loop->iteration%2 == 1) style="background-color:#fff;" @else style="background-color:#F3EADC;" @endif>
             <div class="container">
-                <div class="about-us-container about-us-{{ $about_us_section->id }} d-flex w-75 mx-auto">
+                <div class="orientation-{{ $about_us_section->orientation }} about-us-container about-us-{{ $about_us_section->id }} d-flex w-75 mx-auto">
                     @if ($about_us_section->orientation == 0)
                         <div class="px-2 text-center d-flex align-items-center justify-content-center" style="flex:1;">
                             <img style="width:100%; object-fit: cover; object-position: center;" src="{{ Storage::disk('s3')->url($about_us_section->image) }}" alt="About Us" />
@@ -121,6 +122,7 @@
                 </div>
             </div>
         </div>
+        @endif
         @endforeach
     </section><!-- #content end -->
 @endsection
@@ -137,6 +139,16 @@
 
             .about-us-container {
                 flex-direction: column;
+                width:100%!important;
+            }
+            .orientation-0 div:nth-child(1) {
+                order: 1;
+            }
+            .orientation-0 div:nth-child(2) {
+                order: 0;
+            }
+            #content .section:last-child {
+                padding-bottom:0!important;
             }
         }
 
@@ -148,6 +160,7 @@
                 padding-right: 5rem!important;
             }
             .about-us-container {
+                width:75%!important;
                 flex-direction: row;
             }
 
