@@ -86,7 +86,7 @@
                         @foreach($shops->chunk(3)->all() as $shop_chunks)
                             <div class="text-center oc-item m-2 d-flex flex-column">
                             @foreach($shop_chunks as $shop)
-                                <div style="height:250px;" class="d-flex align-items-center">
+                                <div class="featured-baker-container d-flex align-items-center">
                                     <a href="{{ route('shop.showShop', ['shop' => $shop->slug]) }}">
                                         <img class="rounded mx-auto" style="width:80%; height:auto;" src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
                                     </a>
@@ -130,9 +130,9 @@
                                     </a>
                                 </div>
                                 <div class="fbox-content">
-                                    <h3>{{ isset($homepage) && $homepage->where('field', 'why_buy_from_us_title_' . $i)->first() ? $homepage->where('field', 'why_buy_from_us_title_' . $i)->first()->value : 'Home Bakers' }}</h3>
+                                    <h3>{!! isset($homepage) && $homepage->where('field', 'why_buy_from_us_title_' . $i)->first() ? $homepage->where('field', 'why_buy_from_us_title_' . $i)->first()->value : 'Home Bakers' !!}</h3>
                                     <p class="my-3">
-                                        {{ isset($homepage) && $homepage->where('field', 'why_buy_from_us_description_' . $i)->first() ? $homepage->where('field', 'why_buy_from_us_description_' . $i)->first()->value : 'Home Bakers' }}
+                                        {!! isset($homepage) && $homepage->where('field', 'why_buy_from_us_description_' . $i)->first() ? $homepage->where('field', 'why_buy_from_us_description_' . $i)->first()->value : 'Home Bakers' !!}
                                     </p>
                                 </div>
                             </div>
@@ -202,14 +202,14 @@
         @endif
 
         <div class="cta-section section my-0" style="background-color:#F7F5F0;">
-            <div class="container clearfix d-flex flex-sm-column flex-lg-row flex-md-row">
+            <div class="cta-container container clearfix d-flex">
                 @php $join_us_img = $homepage->where('field', 'join_us_image')->first() ? Storage::disk('s3')->url($homepage->where('field', 'join_us_image')->first()->value) : 'https://via.placeholder.com/600x300'; @endphp
                 @php $join_us_title = $homepage->where('field', 'join_us_title')->first() ? $homepage->where('field', 'join_us_title')->first()->value : ''; @endphp
                 @php $join_us_description = $homepage->where('field', 'join_us_description')->first() ? $homepage->where('field', 'join_us_description')->first()->value : ''; @endphp
                 <div style="flex:1;" class="d-flex align-items-center join-us-image-container">
                     <img src="{{ $join_us_img }}" alt="{{ $join_us_title }}" />
                 </div>
-                <div class="ml-6 d-flex flex-column justify-content-between" style="flex:1;">
+                <div class="cta-text-container d-flex flex-column justify-content-between" style="flex:1;">
                     <h2 class="color nott text-uppercase ls-1 mb-0">{{ $join_us_title }}</h2>
                     <div>
                         {!! nl2br($join_us_description) !!}
@@ -221,6 +221,38 @@
                 </div>
             </div>
         </div>
+            <style>
+                @media(min-width:320px) {
+                    .cta-container {
+                        flex-direction:column;
+                    }
+                    .cta-text-container {
+                        margin-top:3rem!important;
+                    }
+                    .featured-baker-container {
+                        height:175px;
+                    }
+                }
+
+                @media(min-width:768px) {
+                    .featured-baker-container {
+                        height:350px;
+                    }
+                }
+
+                @media(min-width:1024px) {
+                    .cta-container {
+                        flex-direction:row;
+                    }
+                    .cta-text-container {
+                        margin-top:0!important;
+                        margin-left:5rem!important;
+                    }
+                    .featured-baker-container {
+                        height:250px;
+                    }
+                }
+            </style>
 
         @if (false)
         <div id="slider-divider"  style="position: absolute; top: 0; left: 0; width: fit-content; z-index: 3; background: url('{{ asset('canvas/demos/restaurant/images/sketch.png') }}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
