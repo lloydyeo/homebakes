@@ -44,7 +44,7 @@
                         <img src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
                     </div>
                     <div class="col-lg-8">
-                        <h2 class="color">{{ $shop->name }}</h2>
+                        <h2 class="shop-name color">{{ $shop->name }}</h2>
                         <div class="d-flex">
                             <div class="d-flex align-items-start pr-4 color" style="font-size:2em;">
                                 <i class="icon-quote-left1"></i>
