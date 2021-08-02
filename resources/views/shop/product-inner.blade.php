@@ -80,7 +80,9 @@
                         </div>
                         <div class="col-lg-8">
                             <h4 class="text-left color my-3">{{ $product_image->product_name ? $product_image->product_name  : '' }}</h4>
+                            @if ($product_image->product_price > 0)
                             <h5 class="text-left color mb-3">${{ number_format($product_image->product_price, 2) }}</h5>
+                            @endif
                             <div class="text-left">
                                 {!! $product_image->product_description !!}
                             </div>
