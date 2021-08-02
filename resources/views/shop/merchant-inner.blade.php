@@ -41,7 +41,9 @@
             <div class="container">
                 <div class="row">
                     <div class="shop-logo-container col-lg-4">
-                        <img src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                        <a href="{{ $shop->instagram_url }}">
+                            <img src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
+                        </a>
                     </div>
                     <div class="col-lg-8">
                         <h2 class="shop-name color">{{ $shop->name }}</h2>
