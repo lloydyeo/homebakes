@@ -118,7 +118,7 @@
                             @if ($product_image->product_price > 0)
                             <h4 class="text-center color my-3 ">${{ number_format($product_image->product_price, 2) }}</h4>
                             @endif
-                            <div class="text-center mb-5">{!! nl2br($product_image->product_description) !!}</div>
+                            <div class="text-center mb-5 @if (!($product_image->product_price > 0)) mt-3 @endif">{!! nl2br($product_image->product_description) !!}</div>
                         </div>
                     @endforeach
                 </div>
