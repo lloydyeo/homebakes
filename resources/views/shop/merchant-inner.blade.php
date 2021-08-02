@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row">
                     <div class="shop-logo-container col-lg-4">
-                        <a href="{{ $shop->instagram_url }}">
+                        <a href="{{ $shop->instagram_url }}" target="_blank">
                             <img src="{{ Storage::disk('s3')->url($shop->cover_image) }}" alt="{{ $shop->name }}" />
                         </a>
                     </div>
