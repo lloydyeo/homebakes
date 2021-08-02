@@ -115,7 +115,9 @@
                             <a href="{{ route('shop.showProduct', ['product' => $product_image->id]) }}" data-lightbox="gallery-item" class="grid-item">
                                 <img class="rounded-xxl" src="{{ Storage::disk('s3')->url($product_image->image) }}" alt="{{ $shop->name }}">
                             </a>
+                            @if ($product_image->product_price > 0)
                             <h4 class="text-center color my-3 ">${{ number_format($product_image->product_price, 2) }}</h4>
+                            @endif
                             <div class="text-center mb-5">{!! nl2br($product_image->product_description) !!}</div>
                         </div>
                     @endforeach
